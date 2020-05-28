@@ -1,18 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1466 1474" width="1466" height="1474"><defs><style type="text/css">@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400|Roboto:400,&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext')</style></defs><text x="733" y="69" text-anchor="middle" font-size="64px" font-family="Roboto,sans-serif" fill="#52565f">Teleconseille</text><text x="1461" y="1455" text-anchor="end" font-size="14px" font-family="Roboto,sans-serif" color="#52565f">28 May 2020</text><g transform="translate(5,173)"><g><g><g transform="translate(638, 142)"><rect x="0" y="0" rx="2" ry="2" width="180" height="228" fill="#ffffff"/><g><g><g transform="translate( 0, 0 )"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="185" viewBox="0 0 180 185">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1466 1474" width="1466" height="1474"><defs><style type="text/css">@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400|Roboto:400,&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext')</style></defs><text x="733" y="69" text-anchor="middle" font-size="64px" font-family="Roboto,sans-serif" fill="#52565f">TeleDoc</text><text x="1461" y="1455" text-anchor="end" font-size="14px" font-family="Roboto,sans-serif" color="#52565f">28 May 2020</text><g transform="translate(5,173)"><g><g><g transform="translate(638, 142)"><rect x="0" y="0" rx="2" ry="2" width="180" height="228" fill="#ffffff"/><g><g><g transform="translate( 0, 0 )"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="185" viewBox="0 0 180 185">
   <defs>
-    <rect id="bnypuien7dj-main-a" width="160" height="82" rx="2"/>
+    <rect id="g8zwa2r21qi-main-a" width="160" height="82" rx="2"/>
   </defs>
   <g fill="none" fill-rule="evenodd">
     <path fill="#58A8F7" d="M0,2.99971296 C0,1.34301724 1.34537458,0 2.99263929,0 L177.007361,0 C178.66015,0 180,1.34382565 180,2.99971296 L180,185 L0,185 L0,2.99971296 Z" opacity=".097"/>
     <g transform="translate(10 26)">
       <rect width="160" height="82" fill="#58A8F7" opacity=".197" rx="2"/>
-      <mask id="bnypuien7dj-main-b" fill="#fff">
-        <use xlink:href="#bnypuien7dj-main-a"/>
+      <mask id="g8zwa2r21qi-main-b" fill="#fff">
+        <use xlink:href="#g8zwa2r21qi-main-a"/>
       </mask>
-      <use fill="#58A8F7" opacity="0" xlink:href="#bnypuien7dj-main-a"/>
-      <path fill="#58A8F7" d="M123.544554,38 C147.292079,38 158.861386,56.7865169 182,82 C163.123762,82 82.3134379,82 59,82 C79.0940594,61.2359551 99.7970297,38 123.544554,38 Z" mask="url(#bnypuien7dj-main-b)" opacity=".197"/>
-      <path fill="#0D87FF" d="M44.5,31 C69.8826643,31 86.3055556,55.3181901 109,82 C79.2231422,82 7.11330049,82 -20,82 C1.92139189,55.3181901 19.1173357,31 44.5,31 Z" mask="url(#bnypuien7dj-main-b)" opacity=".198"/>
-      <circle cx="87" cy="22" r="9" fill="#58A8F7" mask="url(#bnypuien7dj-main-b)" opacity=".499"/>
+      <use fill="#58A8F7" opacity="0" xlink:href="#g8zwa2r21qi-main-a"/>
+      <path fill="#58A8F7" d="M123.544554,38 C147.292079,38 158.861386,56.7865169 182,82 C163.123762,82 82.3134379,82 59,82 C79.0940594,61.2359551 99.7970297,38 123.544554,38 Z" mask="url(#g8zwa2r21qi-main-b)" opacity=".197"/>
+      <path fill="#0D87FF" d="M44.5,31 C69.8826643,31 86.3055556,55.3181901 109,82 C79.2231422,82 7.11330049,82 -20,82 C1.92139189,55.3181901 19.1173357,31 44.5,31 Z" mask="url(#g8zwa2r21qi-main-b)" opacity=".198"/>
+      <circle cx="87" cy="22" r="9" fill="#58A8F7" mask="url(#g8zwa2r21qi-main-b)" opacity=".499"/>
     </g>
     <g transform="translate(26 118)">
       <circle cx="7.5" cy="7.5" r="7.5" fill="#0D87FF" opacity=".499"/>
@@ -49,9 +49,9 @@
   </g>
 </svg></g></g></g><rect x="-1" y="-1" rx="3" ry="3" width="182" height="230" fill="none" stroke="#A2CEF9" stroke-width="2"/><g transform="translate(0,206)"><g><text x="90" y="4" text-anchor="middle" font-family="Roboto,sans-serif" font-size="14px" fill="#52565f">Main</text></g></g></g><g transform="translate(862, 142)"><rect x="0" y="0" rx="2" ry="2" width="180" height="228" fill="#ffffff"/><g><g><g transform="translate( 0, 0 )"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="185" viewBox="0 0 180 185">
   <defs>
-    <path id="ikt571gpa4k-search_results-a" d="M0,1.99508929 C0,0.893231902 0.897026226,0 2.00494659,0 L21.9950534,0 C23.1023548,0 24,0.892622799 24,1.99508929 L24,16.0049107 C24,17.1067681 23.1029738,18 21.9950534,18 L2.00494659,18 C0.897645164,18 0,17.1073772 0,16.0049107 L0,1.99508929 Z"/>
-    <path id="ikt571gpa4k-search_results-c" d="M0,1.99508929 C0,0.893231902 0.897026226,0 2.00494659,0 L21.9950534,0 C23.1023548,0 24,0.892622799 24,1.99508929 L24,16.0049107 C24,17.1067681 23.1029738,18 21.9950534,18 L2.00494659,18 C0.897645164,18 0,17.1073772 0,16.0049107 L0,1.99508929 Z"/>
-    <path id="ikt571gpa4k-search_results-e" d="M0,1.99508929 C0,0.893231902 0.897026226,0 2.00494659,0 L21.9950534,0 C23.1023548,0 24,0.892622799 24,1.99508929 L24,16.0049107 C24,17.1067681 23.1029738,18 21.9950534,18 L2.00494659,18 C0.897645164,18 0,17.1073772 0,16.0049107 L0,1.99508929 Z"/>
+    <path id="5svjo9yst3w-search_results-a" d="M0,1.99508929 C0,0.893231902 0.897026226,0 2.00494659,0 L21.9950534,0 C23.1023548,0 24,0.892622799 24,1.99508929 L24,16.0049107 C24,17.1067681 23.1029738,18 21.9950534,18 L2.00494659,18 C0.897645164,18 0,17.1073772 0,16.0049107 L0,1.99508929 Z"/>
+    <path id="5svjo9yst3w-search_results-c" d="M0,1.99508929 C0,0.893231902 0.897026226,0 2.00494659,0 L21.9950534,0 C23.1023548,0 24,0.892622799 24,1.99508929 L24,16.0049107 C24,17.1067681 23.1029738,18 21.9950534,18 L2.00494659,18 C0.897645164,18 0,17.1073772 0,16.0049107 L0,1.99508929 Z"/>
+    <path id="5svjo9yst3w-search_results-e" d="M0,1.99508929 C0,0.893231902 0.897026226,0 2.00494659,0 L21.9950534,0 C23.1023548,0 24,0.892622799 24,1.99508929 L24,16.0049107 C24,17.1067681 23.1029738,18 21.9950534,18 L2.00494659,18 C0.897645164,18 0,17.1073772 0,16.0049107 L0,1.99508929 Z"/>
   </defs>
   <g fill="none" fill-rule="evenodd">
     <path fill="#58A8F7" d="M0,2.99971296 C0,1.34301724 1.34537458,0 2.99263929,0 L177.007361,0 C178.66015,0 180,1.34382565 180,2.99971296 L180,185 L0,185 L0,2.99971296 Z" opacity=".097"/>
@@ -68,21 +68,21 @@
     </g>
     <g transform="translate(20 73)">
       <path fill="#58A8F7" d="M0,1.99508929 C0,0.893231902 0.897026226,0 2.00494659,0 L21.9950534,0 C23.1023548,0 24,0.892622799 24,1.99508929 L24,16.0049107 C24,17.1067681 23.1029738,18 21.9950534,18 L2.00494659,18 C0.897645164,18 0,17.1073772 0,16.0049107 L0,1.99508929 Z" opacity=".197"/>
-      <mask id="ikt571gpa4k-search_results-b" fill="#fff">
-        <use xlink:href="#ikt571gpa4k-search_results-a"/>
+      <mask id="5svjo9yst3w-search_results-b" fill="#fff">
+        <use xlink:href="#5svjo9yst3w-search_results-a"/>
       </mask>
-      <path fill="#58A8F7" d="M20.5714286,9.81818182 C25.2050919,9.81818182 28.0565771,13.3115424 32.5714286,18 C28.8882603,18 13.1203921,18 8.57142857,18 C12.4922207,14.1389173 15.9377652,9.81818182 20.5714286,9.81818182 Z" mask="url(#ikt571gpa4k-search_results-b)" opacity=".197"/>
-      <path fill="#0D87FF" d="M3.42857143,8.18181818 C8.31958315,8.18181818 11.9126984,12.8633949 16.2857143,18 C10.5479809,18 -3.34693878,18 -8.57142857,18 C-4.34737299,12.8633949 -1.4624403,8.18181818 3.42857143,8.18181818 Z" mask="url(#ikt571gpa4k-search_results-b)" opacity=".198"/>
-      <circle cx="12.857" cy="5.727" r="3" fill="#58A8F7" mask="url(#ikt571gpa4k-search_results-b)" opacity=".499"/>
+      <path fill="#58A8F7" d="M20.5714286,9.81818182 C25.2050919,9.81818182 28.0565771,13.3115424 32.5714286,18 C28.8882603,18 13.1203921,18 8.57142857,18 C12.4922207,14.1389173 15.9377652,9.81818182 20.5714286,9.81818182 Z" mask="url(#5svjo9yst3w-search_results-b)" opacity=".197"/>
+      <path fill="#0D87FF" d="M3.42857143,8.18181818 C8.31958315,8.18181818 11.9126984,12.8633949 16.2857143,18 C10.5479809,18 -3.34693878,18 -8.57142857,18 C-4.34737299,12.8633949 -1.4624403,8.18181818 3.42857143,8.18181818 Z" mask="url(#5svjo9yst3w-search_results-b)" opacity=".198"/>
+      <circle cx="12.857" cy="5.727" r="3" fill="#58A8F7" mask="url(#5svjo9yst3w-search_results-b)" opacity=".499"/>
     </g>
     <g transform="translate(20 106)">
       <path fill="#58A8F7" d="M0,1.99508929 C0,0.893231902 0.897026226,0 2.00494659,0 L21.9950534,0 C23.1023548,0 24,0.892622799 24,1.99508929 L24,16.0049107 C24,17.1067681 23.1029738,18 21.9950534,18 L2.00494659,18 C0.897645164,18 0,17.1073772 0,16.0049107 L0,1.99508929 Z" opacity=".197"/>
-      <mask id="ikt571gpa4k-search_results-d" fill="#fff">
-        <use xlink:href="#ikt571gpa4k-search_results-c"/>
+      <mask id="5svjo9yst3w-search_results-d" fill="#fff">
+        <use xlink:href="#5svjo9yst3w-search_results-c"/>
       </mask>
-      <path fill="#58A8F7" d="M20.5714286,9.81818182 C25.2050919,9.81818182 28.0565771,13.3115424 32.5714286,18 C28.8882603,18 13.1203921,18 8.57142857,18 C12.4922207,14.1389173 15.9377652,9.81818182 20.5714286,9.81818182 Z" mask="url(#ikt571gpa4k-search_results-d)" opacity=".197"/>
-      <path fill="#0D87FF" d="M3.42857143,8.18181818 C8.31958315,8.18181818 11.9126984,12.8633949 16.2857143,18 C10.5479809,18 -3.34693878,18 -8.57142857,18 C-4.34737299,12.8633949 -1.4624403,8.18181818 3.42857143,8.18181818 Z" mask="url(#ikt571gpa4k-search_results-d)" opacity=".198"/>
-      <circle cx="12.857" cy="5.727" r="3" fill="#58A8F7" mask="url(#ikt571gpa4k-search_results-d)" opacity=".499"/>
+      <path fill="#58A8F7" d="M20.5714286,9.81818182 C25.2050919,9.81818182 28.0565771,13.3115424 32.5714286,18 C28.8882603,18 13.1203921,18 8.57142857,18 C12.4922207,14.1389173 15.9377652,9.81818182 20.5714286,9.81818182 Z" mask="url(#5svjo9yst3w-search_results-d)" opacity=".197"/>
+      <path fill="#0D87FF" d="M3.42857143,8.18181818 C8.31958315,8.18181818 11.9126984,12.8633949 16.2857143,18 C10.5479809,18 -3.34693878,18 -8.57142857,18 C-4.34737299,12.8633949 -1.4624403,8.18181818 3.42857143,8.18181818 Z" mask="url(#5svjo9yst3w-search_results-d)" opacity=".198"/>
+      <circle cx="12.857" cy="5.727" r="3" fill="#58A8F7" mask="url(#5svjo9yst3w-search_results-d)" opacity=".499"/>
     </g>
     <polygon fill="#58A8F7" points="0 0 50 0 50 8 0 8" opacity=".499" transform="translate(54 73)"/>
     <polygon fill="#58A8F7" points="0 0 50 0 50 8 0 8" opacity=".499" transform="translate(54 106)"/>
@@ -100,18 +100,18 @@
     </g>
     <g transform="translate(20 139)">
       <path fill="#58A8F7" d="M0,1.99508929 C0,0.893231902 0.897026226,0 2.00494659,0 L21.9950534,0 C23.1023548,0 24,0.892622799 24,1.99508929 L24,16.0049107 C24,17.1067681 23.1029738,18 21.9950534,18 L2.00494659,18 C0.897645164,18 0,17.1073772 0,16.0049107 L0,1.99508929 Z" opacity=".197"/>
-      <mask id="ikt571gpa4k-search_results-f" fill="#fff">
-        <use xlink:href="#ikt571gpa4k-search_results-e"/>
+      <mask id="5svjo9yst3w-search_results-f" fill="#fff">
+        <use xlink:href="#5svjo9yst3w-search_results-e"/>
       </mask>
-      <path fill="#58A8F7" d="M20.5714286,9.81818182 C25.2050919,9.81818182 28.0565771,13.3115424 32.5714286,18 C28.8882603,18 13.1203921,18 8.57142857,18 C12.4922207,14.1389173 15.9377652,9.81818182 20.5714286,9.81818182 Z" mask="url(#ikt571gpa4k-search_results-f)" opacity=".197"/>
-      <path fill="#0D87FF" d="M3.42857143,8.18181818 C8.31958315,8.18181818 11.9126984,12.8633949 16.2857143,18 C10.5479809,18 -3.34693878,18 -8.57142857,18 C-4.34737299,12.8633949 -1.4624403,8.18181818 3.42857143,8.18181818 Z" mask="url(#ikt571gpa4k-search_results-f)" opacity=".198"/>
-      <circle cx="12.857" cy="5.727" r="3" fill="#58A8F7" mask="url(#ikt571gpa4k-search_results-f)" opacity=".499"/>
+      <path fill="#58A8F7" d="M20.5714286,9.81818182 C25.2050919,9.81818182 28.0565771,13.3115424 32.5714286,18 C28.8882603,18 13.1203921,18 8.57142857,18 C12.4922207,14.1389173 15.9377652,9.81818182 20.5714286,9.81818182 Z" mask="url(#5svjo9yst3w-search_results-f)" opacity=".197"/>
+      <path fill="#0D87FF" d="M3.42857143,8.18181818 C8.31958315,8.18181818 11.9126984,12.8633949 16.2857143,18 C10.5479809,18 -3.34693878,18 -8.57142857,18 C-4.34737299,12.8633949 -1.4624403,8.18181818 3.42857143,8.18181818 Z" mask="url(#5svjo9yst3w-search_results-f)" opacity=".198"/>
+      <circle cx="12.857" cy="5.727" r="3" fill="#58A8F7" mask="url(#5svjo9yst3w-search_results-f)" opacity=".499"/>
     </g>
     <polygon fill="#58A8F7" points="0 0 50 0 50 8 0 8" opacity=".499" transform="translate(54 139)"/>
   </g>
 </svg></g></g></g><rect x="-1" y="-1" rx="3" ry="3" width="182" height="230" fill="none" stroke="#A2CEF9" stroke-width="2"/><g transform="translate(0,206)"><g><text x="90" y="4" text-anchor="middle" font-family="Roboto,sans-serif" font-size="14px" fill="#52565f">search</text></g></g></g><g transform="translate(1198, 142)"><rect x="0" y="0" rx="2" ry="2" width="180" height="228" fill="#ffffff"/><g><g><g transform="translate( 0, 0 )"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="185" viewBox="0 0 180 185">
   <defs>
-    <rect id="g5jakqcn66k-contacts-a" width="160" height="85"/>
+    <rect id="ux8lgyujy9d-contacts-a" width="160" height="85"/>
   </defs>
   <g fill="none" fill-rule="evenodd">
     <path fill="#58A8F7" d="M0,2.99971296 C0,1.34301724 1.34537458,0 2.99263929,0 L177.007361,0 C178.66015,0 180,1.34382565 180,2.99971296 L180,185 L0,185 L0,2.99971296 Z" opacity=".097"/>
@@ -119,10 +119,10 @@
     <path fill="#0D87FF" d="M2.5,5 C1.11928813,5 0,3.88071187 0,2.5 C0,1.11928813 1.11928813,0 2.5,0 C3.88071187,0 5,1.11928813 5,2.5 C5,3.88071187 3.88071187,5 2.5,5 Z M10.5,5 C9.11928813,5 8,3.88071187 8,2.5 C8,1.11928813 9.11928813,0 10.5,0 C11.8807119,0 13,1.11928813 13,2.5 C13,3.88071187 11.8807119,5 10.5,5 Z M18.5,5 C17.1192881,5 16,3.88071187 16,2.5 C16,1.11928813 17.1192881,0 18.5,0 C19.8807119,0 21,1.11928813 21,2.5 C21,3.88071187 19.8807119,5 18.5,5 Z" opacity=".499" transform="translate(5 6)"/>
     <g transform="translate(10 28)">
       <path fill="#58A8F7" d="M3.8458278,-1.55376046e-16 L156.154172,1.55376046e-16 C157.49145,-9.02779573e-17 157.97638,0.139238417 158.465269,0.400699056 C158.954157,0.662159695 159.33784,1.04584256 159.599301,1.53473144 C159.860762,2.02362033 160,2.50854969 160,3.8458278 L160,81.1541722 C160,82.4914503 159.860762,82.9763797 159.599301,83.4652686 C159.33784,83.9541574 158.954157,84.3378403 158.465269,84.5993009 C157.97638,84.8607616 157.49145,85 156.154172,85 L3.8458278,85 C2.50854969,85 2.02362033,84.8607616 1.53473144,84.5993009 C1.04584256,84.3378403 0.662159695,83.9541574 0.400699056,83.4652686 C0.139238417,82.9763797 6.01853049e-17,82.4914503 -1.03584031e-16,81.1541722 L1.03584031e-16,3.8458278 C-6.01853049e-17,2.50854969 0.139238417,2.02362033 0.400699056,1.53473144 C0.662159695,1.04584256 1.04584256,0.662159695 1.53473144,0.400699056 C2.02362033,0.139238417 2.50854969,9.02779573e-17 3.8458278,-1.55376046e-16 Z" opacity=".197"/>
-      <mask id="g5jakqcn66k-contacts-b" fill="#fff">
-        <use xlink:href="#g5jakqcn66k-contacts-a"/>
+      <mask id="ux8lgyujy9d-contacts-b" fill="#fff">
+        <use xlink:href="#ux8lgyujy9d-contacts-a"/>
       </mask>
-      <g mask="url(#g5jakqcn66k-contacts-b)" opacity=".197">
+      <g mask="url(#ux8lgyujy9d-contacts-b)" opacity=".197">
         <g transform="translate(-12 -30)">
           <path fill="#58A8F7" fill-rule="nonzero" d="M24,132 L24,64.498762 C24,57.5971161 29.6002817,52 36.5045983,52 L81.5013874,52 C85.0908283,52 88,54.9094758 88,58.5002314 L88,132 L91,132 L91,58.5002314 C91,53.2526917 86.7477527,49 81.5013874,49 L36.5045983,49 C27.943807,49 21,55.9398821 21,64.498762 L21,132 L24,132 Z"/>
           <polygon fill="#58A8F7" fill-rule="nonzero" points="46 8 46 62.009 49 62.009 49 8"/>
@@ -232,19 +232,19 @@
   </g>
 </svg></g></g></g><rect x="-1" y="-1" rx="3" ry="3" width="182" height="230" fill="none" stroke="#A2CEF9" stroke-width="2"/><g transform="translate(0,206)"><g><text x="90" y="4" text-anchor="middle" font-family="Roboto,sans-serif" font-size="14px" fill="#52565f">Signup</text></g></g></g><g transform="translate(358, 590)"><rect x="0" y="0" rx="2" ry="2" width="180" height="228" fill="#ffffff"/><g><g><g transform="translate( 0, 0 )"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="185" viewBox="0 0 180 185">
   <defs>
-    <path id="onabil1f9nj-lk-a" d="M0,1.99729162 C0,0.894217919 0.899814069,0 1.99402962,0 L158.00597,0 C159.107243,0 160,0.891539827 160,1.99729162 L160,38.0027084 C160,39.1057821 159.100186,40 158.00597,40 L1.99402962,40 C0.89275747,40 0,39.1084602 0,38.0027084 L0,1.99729162 Z"/>
-    <circle id="onabil1f9nj-lk-c" cx="18" cy="18" r="18"/>
+    <path id="i6aym07epk-lk-a" d="M0,1.99729162 C0,0.894217919 0.899814069,0 1.99402962,0 L158.00597,0 C159.107243,0 160,0.891539827 160,1.99729162 L160,38.0027084 C160,39.1057821 159.100186,40 158.00597,40 L1.99402962,40 C0.89275747,40 0,39.1084602 0,38.0027084 L0,1.99729162 Z"/>
+    <circle id="i6aym07epk-lk-c" cx="18" cy="18" r="18"/>
   </defs>
   <g fill="none" fill-rule="evenodd">
     <path fill="#58A8F7" d="M0,2.99971296 C0,1.34301724 1.34537458,0 2.99263929,0 L177.007361,0 C178.66015,0 180,1.34382565 180,2.99971296 L180,185 L0,185 L0,2.99971296 Z" opacity=".097"/>
     <g transform="translate(10 26)">
       <path fill="#58A8F7" d="M0,1.99729162 C0,0.894217919 0.899814069,0 1.99402962,0 L158.00597,0 C159.107243,0 160,0.891539827 160,1.99729162 L160,38.0027084 C160,39.1057821 159.100186,40 158.00597,40 L1.99402962,40 C0.89275747,40 0,39.1084602 0,38.0027084 L0,1.99729162 Z" opacity=".197"/>
-      <mask id="onabil1f9nj-lk-b" fill="#fff">
-        <use xlink:href="#onabil1f9nj-lk-a"/>
+      <mask id="i6aym07epk-lk-b" fill="#fff">
+        <use xlink:href="#i6aym07epk-lk-a"/>
       </mask>
-      <path fill="#58A8F7" d="M123.544554,22 C147.292079,22 158.861386,29.6853933 182,40 C163.123762,40 82.3134379,40 59,40 C79.0940594,31.505618 99.7970297,22 123.544554,22 Z" mask="url(#onabil1f9nj-lk-b)" opacity=".197"/>
-      <path fill="#0D87FF" d="M44.5,9 C69.8826643,9 86.3055556,23.781645 109,40 C79.2231422,40 7.11330049,40 -20,40 C1.92139189,23.781645 19.1173357,9 44.5,9 Z" mask="url(#onabil1f9nj-lk-b)" opacity=".198"/>
-      <circle cx="94" cy="11" r="7" fill="#58A8F7" mask="url(#onabil1f9nj-lk-b)" opacity=".499"/>
+      <path fill="#58A8F7" d="M123.544554,22 C147.292079,22 158.861386,29.6853933 182,40 C163.123762,40 82.3134379,40 59,40 C79.0940594,31.505618 99.7970297,22 123.544554,22 Z" mask="url(#i6aym07epk-lk-b)" opacity=".197"/>
+      <path fill="#0D87FF" d="M44.5,9 C69.8826643,9 86.3055556,23.781645 109,40 C79.2231422,40 7.11330049,40 -20,40 C1.92139189,23.781645 19.1173357,9 44.5,9 Z" mask="url(#i6aym07epk-lk-b)" opacity=".198"/>
+      <circle cx="94" cy="11" r="7" fill="#58A8F7" mask="url(#i6aym07epk-lk-b)" opacity=".499"/>
     </g>
     <circle cx="18" cy="18" r="18" fill="#FFF" transform="translate(19 58)"/>
     <g fill="#58A8F7" opacity=".499" transform="translate(60 71)">
@@ -252,11 +252,11 @@
       <polygon points="0 0 30 0 30 5 0 5" transform="translate(0 9)"/>
     </g>
     <g transform="translate(19 58)">
-      <mask id="onabil1f9nj-lk-d" fill="#fff">
-        <use xlink:href="#onabil1f9nj-lk-c"/>
+      <mask id="i6aym07epk-lk-d" fill="#fff">
+        <use xlink:href="#i6aym07epk-lk-c"/>
       </mask>
-      <use fill="#58A8F7" opacity=".197" xlink:href="#onabil1f9nj-lk-c"/>
-      <path fill="#0D87FF" d="M18,50.4 C9.3843579,50.4 2.4,43.4156421 2.4,34.8 C2.4,26.1843579 9.3843579,19.2 18,19.2 C26.6156421,19.2 33.6,26.1843579 33.6,34.8 C33.6,43.4156421 26.6156421,50.4 18,50.4 Z M18,16.8 C14.6862915,16.8 12,14.1137085 12,10.8 C12,7.4862915 14.6862915,4.8 18,4.8 C21.3137085,4.8 24,7.4862915 24,10.8 C24,14.1137085 21.3137085,16.8 18,16.8 Z" mask="url(#onabil1f9nj-lk-d)" opacity=".499"/>
+      <use fill="#58A8F7" opacity=".197" xlink:href="#i6aym07epk-lk-c"/>
+      <path fill="#0D87FF" d="M18,50.4 C9.3843579,50.4 2.4,43.4156421 2.4,34.8 C2.4,26.1843579 9.3843579,19.2 18,19.2 C26.6156421,19.2 33.6,26.1843579 33.6,34.8 C33.6,43.4156421 26.6156421,50.4 18,50.4 Z M18,16.8 C14.6862915,16.8 12,14.1137085 12,10.8 C12,7.4862915 14.6862915,4.8 18,4.8 C21.3137085,4.8 24,7.4862915 24,10.8 C24,14.1137085 21.3137085,16.8 18,16.8 Z" mask="url(#i6aym07epk-lk-d)" opacity=".499"/>
     </g>
     <path fill="#58A8F7" d="M0,3.00947762 C0,1.34738902 1.34537458,0 2.99263929,0 L177.007361,0 C178.66015,0 180,1.33663106 180,3.00947762 L180,16 L0,16 L0,3.00947762 Z" opacity=".197"/>
     <path fill="#0D87FF" d="M2.5,5 C1.11928813,5 0,3.88071187 0,2.5 C0,1.11928813 1.11928813,0 2.5,0 C3.88071187,0 5,1.11928813 5,2.5 C5,3.88071187 3.88071187,5 2.5,5 Z M10.5,5 C9.11928813,5 8,3.88071187 8,2.5 C8,1.11928813 9.11928813,0 10.5,0 C11.8807119,0 13,1.11928813 13,2.5 C13,3.88071187 11.8807119,5 10.5,5 Z M18.5,5 C17.1192881,5 16,3.88071187 16,2.5 C16,1.11928813 17.1192881,0 18.5,0 C19.8807119,0 21,1.11928813 21,2.5 C21,3.88071187 19.8807119,5 18.5,5 Z" opacity=".499" transform="translate(5 6)"/>
@@ -290,9 +290,9 @@
   </g>
 </svg></g></g></g><rect x="-1" y="-1" rx="3" ry="3" width="182" height="230" fill="none" stroke="#A2CEF9" stroke-width="2"/><g transform="translate(0,206)"><g><text x="90" y="4" text-anchor="middle" font-family="Roboto,sans-serif" font-size="14px" fill="#52565f">Profile</text></g></g></g><g transform="translate(358, 846)"><rect x="0" y="0" rx="2" ry="2" width="180" height="228" fill="#ffffff"/><g><g><g transform="translate( 0, 0 )"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="185" viewBox="0 0 180 185">
   <defs>
-    <path id="uaa1uu18aad-search_results-a" d="M0,1.99508929 C0,0.893231902 0.897026226,0 2.00494659,0 L21.9950534,0 C23.1023548,0 24,0.892622799 24,1.99508929 L24,16.0049107 C24,17.1067681 23.1029738,18 21.9950534,18 L2.00494659,18 C0.897645164,18 0,17.1073772 0,16.0049107 L0,1.99508929 Z"/>
-    <path id="uaa1uu18aad-search_results-c" d="M0,1.99508929 C0,0.893231902 0.897026226,0 2.00494659,0 L21.9950534,0 C23.1023548,0 24,0.892622799 24,1.99508929 L24,16.0049107 C24,17.1067681 23.1029738,18 21.9950534,18 L2.00494659,18 C0.897645164,18 0,17.1073772 0,16.0049107 L0,1.99508929 Z"/>
-    <path id="uaa1uu18aad-search_results-e" d="M0,1.99508929 C0,0.893231902 0.897026226,0 2.00494659,0 L21.9950534,0 C23.1023548,0 24,0.892622799 24,1.99508929 L24,16.0049107 C24,17.1067681 23.1029738,18 21.9950534,18 L2.00494659,18 C0.897645164,18 0,17.1073772 0,16.0049107 L0,1.99508929 Z"/>
+    <path id="pmy37m834kn-search_results-a" d="M0,1.99508929 C0,0.893231902 0.897026226,0 2.00494659,0 L21.9950534,0 C23.1023548,0 24,0.892622799 24,1.99508929 L24,16.0049107 C24,17.1067681 23.1029738,18 21.9950534,18 L2.00494659,18 C0.897645164,18 0,17.1073772 0,16.0049107 L0,1.99508929 Z"/>
+    <path id="pmy37m834kn-search_results-c" d="M0,1.99508929 C0,0.893231902 0.897026226,0 2.00494659,0 L21.9950534,0 C23.1023548,0 24,0.892622799 24,1.99508929 L24,16.0049107 C24,17.1067681 23.1029738,18 21.9950534,18 L2.00494659,18 C0.897645164,18 0,17.1073772 0,16.0049107 L0,1.99508929 Z"/>
+    <path id="pmy37m834kn-search_results-e" d="M0,1.99508929 C0,0.893231902 0.897026226,0 2.00494659,0 L21.9950534,0 C23.1023548,0 24,0.892622799 24,1.99508929 L24,16.0049107 C24,17.1067681 23.1029738,18 21.9950534,18 L2.00494659,18 C0.897645164,18 0,17.1073772 0,16.0049107 L0,1.99508929 Z"/>
   </defs>
   <g fill="none" fill-rule="evenodd">
     <path fill="#58A8F7" d="M0,2.99971296 C0,1.34301724 1.34537458,0 2.99263929,0 L177.007361,0 C178.66015,0 180,1.34382565 180,2.99971296 L180,185 L0,185 L0,2.99971296 Z" opacity=".097"/>
@@ -309,21 +309,21 @@
     </g>
     <g transform="translate(20 73)">
       <path fill="#58A8F7" d="M0,1.99508929 C0,0.893231902 0.897026226,0 2.00494659,0 L21.9950534,0 C23.1023548,0 24,0.892622799 24,1.99508929 L24,16.0049107 C24,17.1067681 23.1029738,18 21.9950534,18 L2.00494659,18 C0.897645164,18 0,17.1073772 0,16.0049107 L0,1.99508929 Z" opacity=".197"/>
-      <mask id="uaa1uu18aad-search_results-b" fill="#fff">
-        <use xlink:href="#uaa1uu18aad-search_results-a"/>
+      <mask id="pmy37m834kn-search_results-b" fill="#fff">
+        <use xlink:href="#pmy37m834kn-search_results-a"/>
       </mask>
-      <path fill="#58A8F7" d="M20.5714286,9.81818182 C25.2050919,9.81818182 28.0565771,13.3115424 32.5714286,18 C28.8882603,18 13.1203921,18 8.57142857,18 C12.4922207,14.1389173 15.9377652,9.81818182 20.5714286,9.81818182 Z" mask="url(#uaa1uu18aad-search_results-b)" opacity=".197"/>
-      <path fill="#0D87FF" d="M3.42857143,8.18181818 C8.31958315,8.18181818 11.9126984,12.8633949 16.2857143,18 C10.5479809,18 -3.34693878,18 -8.57142857,18 C-4.34737299,12.8633949 -1.4624403,8.18181818 3.42857143,8.18181818 Z" mask="url(#uaa1uu18aad-search_results-b)" opacity=".198"/>
-      <circle cx="12.857" cy="5.727" r="3" fill="#58A8F7" mask="url(#uaa1uu18aad-search_results-b)" opacity=".499"/>
+      <path fill="#58A8F7" d="M20.5714286,9.81818182 C25.2050919,9.81818182 28.0565771,13.3115424 32.5714286,18 C28.8882603,18 13.1203921,18 8.57142857,18 C12.4922207,14.1389173 15.9377652,9.81818182 20.5714286,9.81818182 Z" mask="url(#pmy37m834kn-search_results-b)" opacity=".197"/>
+      <path fill="#0D87FF" d="M3.42857143,8.18181818 C8.31958315,8.18181818 11.9126984,12.8633949 16.2857143,18 C10.5479809,18 -3.34693878,18 -8.57142857,18 C-4.34737299,12.8633949 -1.4624403,8.18181818 3.42857143,8.18181818 Z" mask="url(#pmy37m834kn-search_results-b)" opacity=".198"/>
+      <circle cx="12.857" cy="5.727" r="3" fill="#58A8F7" mask="url(#pmy37m834kn-search_results-b)" opacity=".499"/>
     </g>
     <g transform="translate(20 106)">
       <path fill="#58A8F7" d="M0,1.99508929 C0,0.893231902 0.897026226,0 2.00494659,0 L21.9950534,0 C23.1023548,0 24,0.892622799 24,1.99508929 L24,16.0049107 C24,17.1067681 23.1029738,18 21.9950534,18 L2.00494659,18 C0.897645164,18 0,17.1073772 0,16.0049107 L0,1.99508929 Z" opacity=".197"/>
-      <mask id="uaa1uu18aad-search_results-d" fill="#fff">
-        <use xlink:href="#uaa1uu18aad-search_results-c"/>
+      <mask id="pmy37m834kn-search_results-d" fill="#fff">
+        <use xlink:href="#pmy37m834kn-search_results-c"/>
       </mask>
-      <path fill="#58A8F7" d="M20.5714286,9.81818182 C25.2050919,9.81818182 28.0565771,13.3115424 32.5714286,18 C28.8882603,18 13.1203921,18 8.57142857,18 C12.4922207,14.1389173 15.9377652,9.81818182 20.5714286,9.81818182 Z" mask="url(#uaa1uu18aad-search_results-d)" opacity=".197"/>
-      <path fill="#0D87FF" d="M3.42857143,8.18181818 C8.31958315,8.18181818 11.9126984,12.8633949 16.2857143,18 C10.5479809,18 -3.34693878,18 -8.57142857,18 C-4.34737299,12.8633949 -1.4624403,8.18181818 3.42857143,8.18181818 Z" mask="url(#uaa1uu18aad-search_results-d)" opacity=".198"/>
-      <circle cx="12.857" cy="5.727" r="3" fill="#58A8F7" mask="url(#uaa1uu18aad-search_results-d)" opacity=".499"/>
+      <path fill="#58A8F7" d="M20.5714286,9.81818182 C25.2050919,9.81818182 28.0565771,13.3115424 32.5714286,18 C28.8882603,18 13.1203921,18 8.57142857,18 C12.4922207,14.1389173 15.9377652,9.81818182 20.5714286,9.81818182 Z" mask="url(#pmy37m834kn-search_results-d)" opacity=".197"/>
+      <path fill="#0D87FF" d="M3.42857143,8.18181818 C8.31958315,8.18181818 11.9126984,12.8633949 16.2857143,18 C10.5479809,18 -3.34693878,18 -8.57142857,18 C-4.34737299,12.8633949 -1.4624403,8.18181818 3.42857143,8.18181818 Z" mask="url(#pmy37m834kn-search_results-d)" opacity=".198"/>
+      <circle cx="12.857" cy="5.727" r="3" fill="#58A8F7" mask="url(#pmy37m834kn-search_results-d)" opacity=".499"/>
     </g>
     <polygon fill="#58A8F7" points="0 0 50 0 50 8 0 8" opacity=".499" transform="translate(54 73)"/>
     <polygon fill="#58A8F7" points="0 0 50 0 50 8 0 8" opacity=".499" transform="translate(54 106)"/>
@@ -341,18 +341,18 @@
     </g>
     <g transform="translate(20 139)">
       <path fill="#58A8F7" d="M0,1.99508929 C0,0.893231902 0.897026226,0 2.00494659,0 L21.9950534,0 C23.1023548,0 24,0.892622799 24,1.99508929 L24,16.0049107 C24,17.1067681 23.1029738,18 21.9950534,18 L2.00494659,18 C0.897645164,18 0,17.1073772 0,16.0049107 L0,1.99508929 Z" opacity=".197"/>
-      <mask id="uaa1uu18aad-search_results-f" fill="#fff">
-        <use xlink:href="#uaa1uu18aad-search_results-e"/>
+      <mask id="pmy37m834kn-search_results-f" fill="#fff">
+        <use xlink:href="#pmy37m834kn-search_results-e"/>
       </mask>
-      <path fill="#58A8F7" d="M20.5714286,9.81818182 C25.2050919,9.81818182 28.0565771,13.3115424 32.5714286,18 C28.8882603,18 13.1203921,18 8.57142857,18 C12.4922207,14.1389173 15.9377652,9.81818182 20.5714286,9.81818182 Z" mask="url(#uaa1uu18aad-search_results-f)" opacity=".197"/>
-      <path fill="#0D87FF" d="M3.42857143,8.18181818 C8.31958315,8.18181818 11.9126984,12.8633949 16.2857143,18 C10.5479809,18 -3.34693878,18 -8.57142857,18 C-4.34737299,12.8633949 -1.4624403,8.18181818 3.42857143,8.18181818 Z" mask="url(#uaa1uu18aad-search_results-f)" opacity=".198"/>
-      <circle cx="12.857" cy="5.727" r="3" fill="#58A8F7" mask="url(#uaa1uu18aad-search_results-f)" opacity=".499"/>
+      <path fill="#58A8F7" d="M20.5714286,9.81818182 C25.2050919,9.81818182 28.0565771,13.3115424 32.5714286,18 C28.8882603,18 13.1203921,18 8.57142857,18 C12.4922207,14.1389173 15.9377652,9.81818182 20.5714286,9.81818182 Z" mask="url(#pmy37m834kn-search_results-f)" opacity=".197"/>
+      <path fill="#0D87FF" d="M3.42857143,8.18181818 C8.31958315,8.18181818 11.9126984,12.8633949 16.2857143,18 C10.5479809,18 -3.34693878,18 -8.57142857,18 C-4.34737299,12.8633949 -1.4624403,8.18181818 3.42857143,8.18181818 Z" mask="url(#pmy37m834kn-search_results-f)" opacity=".198"/>
+      <circle cx="12.857" cy="5.727" r="3" fill="#58A8F7" mask="url(#pmy37m834kn-search_results-f)" opacity=".499"/>
     </g>
     <polygon fill="#58A8F7" points="0 0 50 0 50 8 0 8" opacity=".499" transform="translate(54 139)"/>
   </g>
 </svg></g></g></g><rect x="-1" y="-1" rx="3" ry="3" width="182" height="230" fill="none" stroke="#A2CEF9" stroke-width="2"/><g transform="translate(0,206)"><g><text x="90" y="4" text-anchor="middle" font-family="Roboto,sans-serif" font-size="14px" fill="#52565f">Appointements</text></g></g></g><g transform="translate(582, 846)"><rect x="0" y="0" rx="2" ry="2" width="180" height="228" fill="#ffffff"/><g><g><g transform="translate( 0, 0 )"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="185" viewBox="0 0 180 185">
   <defs>
-    <rect id="7tvup8vn4g5-video_player-a" width="160" height="99" rx="2"/>
+    <rect id="ubrxut5bzb-video_player-a" width="160" height="99" rx="2"/>
   </defs>
   <g fill="none" fill-rule="evenodd">
     <path fill="#58A8F7" d="M0,2.99971296 C0,1.34301724 1.34537458,0 2.99263929,0 L177.007361,0 C178.66015,0 180,1.34382565 180,2.99971296 L180,185 L0,185 L0,2.99971296 Z" opacity=".097"/>
@@ -360,13 +360,13 @@
     <path fill="#0D87FF" d="M2.5,5 C1.11928813,5 0,3.88071187 0,2.5 C0,1.11928813 1.11928813,0 2.5,0 C3.88071187,0 5,1.11928813 5,2.5 C5,3.88071187 3.88071187,5 2.5,5 Z M10.5,5 C9.11928813,5 8,3.88071187 8,2.5 C8,1.11928813 9.11928813,0 10.5,0 C11.8807119,0 13,1.11928813 13,2.5 C13,3.88071187 11.8807119,5 10.5,5 Z M18.5,5 C17.1192881,5 16,3.88071187 16,2.5 C16,1.11928813 17.1192881,0 18.5,0 C19.8807119,0 21,1.11928813 21,2.5 C21,3.88071187 19.8807119,5 18.5,5 Z" opacity=".499" transform="translate(5 6)"/>
     <g transform="translate(10 63)">
       <rect width="160" height="99" fill="#58A8F7" opacity=".197" rx="2"/>
-      <mask id="7tvup8vn4g5-video_player-b" fill="#fff">
-        <use xlink:href="#7tvup8vn4g5-video_player-a"/>
+      <mask id="ubrxut5bzb-video_player-b" fill="#fff">
+        <use xlink:href="#ubrxut5bzb-video_player-a"/>
       </mask>
-      <use fill="#58A8F7" opacity="0" xlink:href="#7tvup8vn4g5-video_player-a"/>
-      <path fill="#58A8F7" d="M123.544554,45.8780488 C147.292079,45.8780488 158.861386,68.5593313 182,99 C163.123762,99 82.3134379,99 59,99 C79.0940594,73.931214 99.7970297,45.8780488 123.544554,45.8780488 Z" mask="url(#7tvup8vn4g5-video_player-b)" opacity=".197"/>
-      <path fill="#0D87FF" d="M44.5,37.4268293 C69.8826643,37.4268293 86.3055556,66.7865954 109,99 C79.2231422,99 7.11330049,99 -20,99 C1.92139189,66.7865954 19.1173357,37.4268293 44.5,37.4268293 Z" mask="url(#7tvup8vn4g5-video_player-b)" opacity=".198"/>
-      <circle cx="87" cy="26.561" r="9" fill="#58A8F7" mask="url(#7tvup8vn4g5-video_player-b)" opacity=".499"/>
+      <use fill="#58A8F7" opacity="0" xlink:href="#ubrxut5bzb-video_player-a"/>
+      <path fill="#58A8F7" d="M123.544554,45.8780488 C147.292079,45.8780488 158.861386,68.5593313 182,99 C163.123762,99 82.3134379,99 59,99 C79.0940594,73.931214 99.7970297,45.8780488 123.544554,45.8780488 Z" mask="url(#ubrxut5bzb-video_player-b)" opacity=".197"/>
+      <path fill="#0D87FF" d="M44.5,37.4268293 C69.8826643,37.4268293 86.3055556,66.7865954 109,99 C79.2231422,99 7.11330049,99 -20,99 C1.92139189,66.7865954 19.1173357,37.4268293 44.5,37.4268293 Z" mask="url(#ubrxut5bzb-video_player-b)" opacity=".198"/>
+      <circle cx="87" cy="26.561" r="9" fill="#58A8F7" mask="url(#ubrxut5bzb-video_player-b)" opacity=".499"/>
       <g transform="translate(56 21)">
         <circle cx="24.5" cy="24.5" r="24.5" fill="#FFF"/>
         <polygon fill="#0D87FF" points="17 10.5 0 21 0 0" transform="translate(19 14)"/>
@@ -442,19 +442,19 @@
   </g>
 </svg></g></g></g><rect x="-1" y="-1" rx="3" ry="3" width="182" height="230" fill="none" stroke="#A2CEF9" stroke-width="2"/><g transform="translate(0,206)"><g><text x="90" y="4" text-anchor="middle" font-family="Roboto,sans-serif" font-size="14px" fill="#52565f">Signup</text></g></g></g><g transform="translate(134, 846)"><rect x="0" y="0" rx="2" ry="2" width="180" height="228" fill="#ffffff"/><g><g><g transform="translate( 0, 0 )"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="180" height="185" viewBox="0 0 180 185">
   <defs>
-    <path id="tjz44ashtts-lk-a" d="M0,1.99729162 C0,0.894217919 0.899814069,0 1.99402962,0 L158.00597,0 C159.107243,0 160,0.891539827 160,1.99729162 L160,38.0027084 C160,39.1057821 159.100186,40 158.00597,40 L1.99402962,40 C0.89275747,40 0,39.1084602 0,38.0027084 L0,1.99729162 Z"/>
-    <circle id="tjz44ashtts-lk-c" cx="18" cy="18" r="18"/>
+    <path id="ug26comejjn-lk-a" d="M0,1.99729162 C0,0.894217919 0.899814069,0 1.99402962,0 L158.00597,0 C159.107243,0 160,0.891539827 160,1.99729162 L160,38.0027084 C160,39.1057821 159.100186,40 158.00597,40 L1.99402962,40 C0.89275747,40 0,39.1084602 0,38.0027084 L0,1.99729162 Z"/>
+    <circle id="ug26comejjn-lk-c" cx="18" cy="18" r="18"/>
   </defs>
   <g fill="none" fill-rule="evenodd">
     <path fill="#58A8F7" d="M0,2.99971296 C0,1.34301724 1.34537458,0 2.99263929,0 L177.007361,0 C178.66015,0 180,1.34382565 180,2.99971296 L180,185 L0,185 L0,2.99971296 Z" opacity=".097"/>
     <g transform="translate(10 26)">
       <path fill="#58A8F7" d="M0,1.99729162 C0,0.894217919 0.899814069,0 1.99402962,0 L158.00597,0 C159.107243,0 160,0.891539827 160,1.99729162 L160,38.0027084 C160,39.1057821 159.100186,40 158.00597,40 L1.99402962,40 C0.89275747,40 0,39.1084602 0,38.0027084 L0,1.99729162 Z" opacity=".197"/>
-      <mask id="tjz44ashtts-lk-b" fill="#fff">
-        <use xlink:href="#tjz44ashtts-lk-a"/>
+      <mask id="ug26comejjn-lk-b" fill="#fff">
+        <use xlink:href="#ug26comejjn-lk-a"/>
       </mask>
-      <path fill="#58A8F7" d="M123.544554,22 C147.292079,22 158.861386,29.6853933 182,40 C163.123762,40 82.3134379,40 59,40 C79.0940594,31.505618 99.7970297,22 123.544554,22 Z" mask="url(#tjz44ashtts-lk-b)" opacity=".197"/>
-      <path fill="#0D87FF" d="M44.5,9 C69.8826643,9 86.3055556,23.781645 109,40 C79.2231422,40 7.11330049,40 -20,40 C1.92139189,23.781645 19.1173357,9 44.5,9 Z" mask="url(#tjz44ashtts-lk-b)" opacity=".198"/>
-      <circle cx="94" cy="11" r="7" fill="#58A8F7" mask="url(#tjz44ashtts-lk-b)" opacity=".499"/>
+      <path fill="#58A8F7" d="M123.544554,22 C147.292079,22 158.861386,29.6853933 182,40 C163.123762,40 82.3134379,40 59,40 C79.0940594,31.505618 99.7970297,22 123.544554,22 Z" mask="url(#ug26comejjn-lk-b)" opacity=".197"/>
+      <path fill="#0D87FF" d="M44.5,9 C69.8826643,9 86.3055556,23.781645 109,40 C79.2231422,40 7.11330049,40 -20,40 C1.92139189,23.781645 19.1173357,9 44.5,9 Z" mask="url(#ug26comejjn-lk-b)" opacity=".198"/>
+      <circle cx="94" cy="11" r="7" fill="#58A8F7" mask="url(#ug26comejjn-lk-b)" opacity=".499"/>
     </g>
     <circle cx="18" cy="18" r="18" fill="#FFF" transform="translate(19 58)"/>
     <g fill="#58A8F7" opacity=".499" transform="translate(60 71)">
@@ -462,11 +462,11 @@
       <polygon points="0 0 30 0 30 5 0 5" transform="translate(0 9)"/>
     </g>
     <g transform="translate(19 58)">
-      <mask id="tjz44ashtts-lk-d" fill="#fff">
-        <use xlink:href="#tjz44ashtts-lk-c"/>
+      <mask id="ug26comejjn-lk-d" fill="#fff">
+        <use xlink:href="#ug26comejjn-lk-c"/>
       </mask>
-      <use fill="#58A8F7" opacity=".197" xlink:href="#tjz44ashtts-lk-c"/>
-      <path fill="#0D87FF" d="M18,50.4 C9.3843579,50.4 2.4,43.4156421 2.4,34.8 C2.4,26.1843579 9.3843579,19.2 18,19.2 C26.6156421,19.2 33.6,26.1843579 33.6,34.8 C33.6,43.4156421 26.6156421,50.4 18,50.4 Z M18,16.8 C14.6862915,16.8 12,14.1137085 12,10.8 C12,7.4862915 14.6862915,4.8 18,4.8 C21.3137085,4.8 24,7.4862915 24,10.8 C24,14.1137085 21.3137085,16.8 18,16.8 Z" mask="url(#tjz44ashtts-lk-d)" opacity=".499"/>
+      <use fill="#58A8F7" opacity=".197" xlink:href="#ug26comejjn-lk-c"/>
+      <path fill="#0D87FF" d="M18,50.4 C9.3843579,50.4 2.4,43.4156421 2.4,34.8 C2.4,26.1843579 9.3843579,19.2 18,19.2 C26.6156421,19.2 33.6,26.1843579 33.6,34.8 C33.6,43.4156421 26.6156421,50.4 18,50.4 Z M18,16.8 C14.6862915,16.8 12,14.1137085 12,10.8 C12,7.4862915 14.6862915,4.8 18,4.8 C21.3137085,4.8 24,7.4862915 24,10.8 C24,14.1137085 21.3137085,16.8 18,16.8 Z" mask="url(#ug26comejjn-lk-d)" opacity=".499"/>
     </g>
     <path fill="#58A8F7" d="M0,3.00947762 C0,1.34738902 1.34537458,0 2.99263929,0 L177.007361,0 C178.66015,0 180,1.33663106 180,3.00947762 L180,16 L0,16 L0,3.00947762 Z" opacity=".197"/>
     <path fill="#0D87FF" d="M2.5,5 C1.11928813,5 0,3.88071187 0,2.5 C0,1.11928813 1.11928813,0 2.5,0 C3.88071187,0 5,1.11928813 5,2.5 C5,3.88071187 3.88071187,5 2.5,5 Z M10.5,5 C9.11928813,5 8,3.88071187 8,2.5 C8,1.11928813 9.11928813,0 10.5,0 C11.8807119,0 13,1.11928813 13,2.5 C13,3.88071187 11.8807119,5 10.5,5 Z M18.5,5 C17.1192881,5 16,3.88071187 16,2.5 C16,1.11928813 17.1192881,0 18.5,0 C19.8807119,0 21,1.11928813 21,2.5 C21,3.88071187 19.8807119,5 18.5,5 Z" opacity=".499" transform="translate(5 6)"/>
@@ -498,7 +498,7 @@
       <polygon fill="#58A8F7" points="0 0 32 0 32 3 0 3" opacity=".197"/>
     </g>
   </g>
-</svg></g></g></g><rect x="-1" y="-1" rx="3" ry="3" width="182" height="230" fill="none" stroke="#A2CEF9" stroke-width="2"/><g transform="translate(0,206)"><g><text x="90" y="4" text-anchor="middle" font-family="Roboto,sans-serif" font-size="14px" fill="#52565f">Profile Settings</text></g></g></g><g transform="translate( 644, 28 )"><rect width="168" height="72" rx="36" ry="36" fill="#FFFFFF" stroke="#58A8F7" stroke-width="2"/><g transform="translate(8, 8)"><defs><rect id="m0wu15w6qkrect" x="0" y="0" width="56" height="56" rx="28" ry="28"/><clipPath id="m0wu15w6qkclip"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#m0wu15w6qkrect"/></clipPath></defs><g><g transform="translate( 0, 0 )"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 216 216" fill="none">
+</svg></g></g></g><rect x="-1" y="-1" rx="3" ry="3" width="182" height="230" fill="none" stroke="#A2CEF9" stroke-width="2"/><g transform="translate(0,206)"><g><text x="90" y="4" text-anchor="middle" font-family="Roboto,sans-serif" font-size="14px" fill="#52565f">Profile Settings</text></g></g></g><g transform="translate( 644, 28 )"><rect width="168" height="72" rx="36" ry="36" fill="#FFFFFF" stroke="#58A8F7" stroke-width="2"/><g transform="translate(8, 8)"><defs><rect id="06v6cfrxqztprect" x="0" y="0" width="56" height="56" rx="28" ry="28"/><clipPath id="06v6cfrxqztpclip"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#06v6cfrxqztprect"/></clipPath></defs><g><g transform="translate( 0, 0 )"><svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 216 216" fill="none">
 <g opacity="0.5">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M69.2102 47.6543C73.6017 60.4415 92.0956 64.3377 103.931 66.6351C111.088 68.0245 113.213 68.3104 113.213 74.8121C113.213 78.2827 111.509 81.8996 109.077 85.3539C108.079 86.7705 107.105 88.1535 106.402 89.4738C107.252 87.4965 108.337 85.5802 109.243 83.9797C109.905 82.8102 110.472 81.8091 110.782 81.0763C113.843 73.7889 74.1242 76.7938 74.1242 76.7938C74.1242 76.7938 76.145 69.0703 77.382 62.5653C72.3733 58.8951 68.8882 53.947 69.2102 47.6543Z" fill="#D6EBFF"/>
 <path d="M106.402 89.4738C105.865 90.483 105.486 91.4557 105.375 92.3787C105.63 91.4155 105.988 90.4374 106.402 89.4738Z" fill="#D6EBFF"/>
