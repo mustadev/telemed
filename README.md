@@ -1,2 +1,2 @@
-# telemed
+# TeleMed
 Visit your Doctor ONLINE.
