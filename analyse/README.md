@@ -1,7 +1,5 @@
 # TeleMed Analyse
 
-## User Story
-
 ## Site Map
 
 Site Map: 
