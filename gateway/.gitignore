@@ -22,6 +22,7 @@ target
 
 # VSCode
 .vscode
+.factorypath
 
 # logback
 logback.out.xml
