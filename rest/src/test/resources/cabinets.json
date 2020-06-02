@@ -1,0 +1,65 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "Doctor set",
+    "type": "array",
+    "items": {
+        "title": "Doctor",
+        "type": "object",
+        "properties": {
+            "id": {
+                "description": "The unique identifier for a doctor",
+                "type": "string"
+            },
+            "lastName": {
+                "type": "string"
+            },
+            "firstName": {
+                "type": "string"
+            },
+            "password": {
+                "type": "string"
+            },
+            "email": {
+                "type": "string"
+            },
+            "speciality": {
+                "type": "string"
+            },
+            "clinic":{
+            	"type": "object"
+            },
+	    	"aboutMe": {
+                "type": "string"
+            },
+	    	"city": {
+                "type": "string"
+            },
+            "rating": {
+                "type": "number",
+                "minimum": 0,
+                "exclusiveMinimum": true
+            },
+            "reviews": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+		    		"properties": {
+		    			"id": {"type": "string"},
+		      		    "content": {"type": "string"},
+		        		"patientId": {"type": "object"},
+		        		"likes": {
+		        			"type": "array", 
+		        			"items": {
+		        			"type": "object",
+		        			"properties": {
+		        				"authorId":"string"
+		        				}
+		        			}
+		    	}
+                }
+            }
+
+        },
+        "required": ["id", "email", "password"]
+    }
+}
