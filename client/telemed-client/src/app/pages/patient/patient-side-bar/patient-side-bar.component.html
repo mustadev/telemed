@@ -1,0 +1,54 @@
+<!-- Profile Sidebar -->
+<div class="card p-1">
+    <div class="row">
+        <div class="col-12">
+            <div class="row text-center pb-2">
+                <div class="col-12">
+                    <a *ngIf="avatar.length > 100" data-fancybox="gallery" [href]="avatar">
+                        <img class="img-fluid img-thumbnail patient-img" [src]="avatar" alt="Patient Image">
+                    </a>
+                    <a *ngIf="avatar.length < 100" data-fancybox="gallery" href="assets/img/default-patient.jpeg">
+                        <img src="assets/img/default-patient.jpeg" class="img-fluid img-thumbnail patient-img" alt="Patient Image">
+                    </a>
+                </div>
+                <div class="col-12">
+
+                    <h3>{{patient?.firstname | titlecase }} {{patient?.lastname | titlecase }}</h3>
+                    <div class="patient-details">
+                        <h5 *ngIf="patient?.birthday"><i class="fa fa-birthday-cake"></i> {{patient.birthday | date }}
+                        </h5>
+                        <h5 *ngIf="patient?.country && patient?.city" class="mb-0"><i class="fas fa-map-marker-alt"></i>
+                            {{patient.country | titlecase }}, {{patient.city | titlecase }}
+                        </h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div routerLinkActive="active">
+                <a  class="nav-item" routerLink="/patient/appointments">
+                    <i class="fa fa-bookmark p-1"></i>
+                    <span class="text-muted">Appointments</span>
+                </a>
+            </div>
+            
+        </div>
+        <div class="col-12">
+            <div class="nav-item" routerLinkActive="active">
+            <a routerLink="/patient/profile">
+                <i class="fa fa-user p-1"></i>
+                <span>Profile Settings</span>
+            </a>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="nav-item" routerLinkActive="active">
+            <a  routerLink="/patient/change-password">
+                <i class="fa fa-lock p-1"></i>
+                <span>Change Password</span>
+            </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- / Profile Sidebar -->

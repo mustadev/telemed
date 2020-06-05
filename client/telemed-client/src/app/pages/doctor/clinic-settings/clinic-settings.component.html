@@ -1,0 +1,146 @@
+<div class="container-fluid mb-3 m-2">
+    <div class="row">
+        <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+            <app-doctor-side-bar [avatar]="avatar"></app-doctor-side-bar>
+        </div>
+        <div class="col-md-7 col-lg-8 col-xl-9">
+            <!-- Clinic Info -->
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Clinic Info</h4>
+                    <div class="row form-row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Clinic Name</label>
+                                <input type="text" class="form-control" [ngModel]="clinic?.name"
+                                    (ngModelChange)="clinic.name=$event">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Clinic Full Address</label>
+                                <input [value]="clinic?.address" type="text" class="form-control"
+                                    [ngModel]="clinic?.address" (ngModelChange)="clinic.address=$event">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Country</label>
+                                <input [value]="clinic?.country" type="text" class="form-control"
+                                    [ngModel]="clinic?.country" (ngModelChange)="clinic.country=$event">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>City</label>
+                                <input [value]="clinic?.city" [ngModel]="clinic?.city"
+                                    (ngModelChange)="clinic.city=$event" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea [value]="clinic?.description" [ngModel]="clinic?.description"
+                                    (ngModelChange)="clinic.description=$event" class="form-control"
+                                    rows="5"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Min Price</label>
+                                <input [value]="clinic?.minPrice" [ngModel]="clinic?.minPrice"
+                                    (ngModelChange)="clinic.minPrice=$event" type="number" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Max Price</label>
+                                <input [value]="clinic?.maxPrice" [ngModel]="clinic?.maxPrice"
+                                    (ngModelChange)="clinic.maxPrice=$event" type="number" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Consulte Price</label>
+                                <input [value]="clinic?.consultPrice" [ngModel]="clinic?.consultPrice"
+                                    (ngModelChange)="clinic.consultPrice=$event" type="number" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Clinic Images</label>
+                                <!-- <form action="#" class="dropzone"></form> -->
+                                <div *ngIf="currentSelectedPhoto" class="progress">
+                                    <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar"
+                                        attr.aria-valuenow="{{ uploadProgress }}" aria-valuemin="0" aria-valuemax="100"
+                                        [ngStyle]="{ width: uploadProgress + '%' }">
+                                        {{ uploadProgress }}%
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="add-photo-btn">
+                                        <span><i class="fa fa-upload"></i> Upload Photo</span>
+                                        <input type="file" class="upload" (change)="uploadClinicPhoto($event)">
+                                    </div>
+                                    <small class="form-text text-muted">Allowed JPG, GIF or PNG. Max size of
+                                        2MB</small>
+                                </div>
+                                <!-- <input type="file" class="upload" (change)="uploadClinicPhoto($event)" /> -->
+                            </div>
+                            <div class="upload-wrap">
+                                <div *ngFor="let clinicPhoto of clinicPhotos" class="upload-images border">
+                                    <img [src]="clinicPhoto?.image" alt="Upload Image">
+                                    <a (click)="deleteClinicPhoto(clinicPhoto?.id)"
+                                        class="btn btn-icon btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-md-12 mt-5">
+                            <div class="form-group">
+                                <label>Services</label>
+                                <input [value]="services" [ngModel]="services" (ngModelChange)="services=$event"
+                                    type="text" class="form-control">
+                                <small class="form-text text-muted">Note : Type , to enter to multiple
+                                    Services</small>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Specialisation</label>
+                                <input [value]="specialities" [ngModel]="specialities"
+                                    (ngModelChange)="specialities=$event" type="text" class="form-control">
+                                <small class="form-text text-muted">Note : Type , to enter to multiple
+                                    Specializations</small>
+                            </div>
+                        </div>
+                        <div *ngIf="clinic?.location" class="col-md-12">
+                            <div class="form-group">
+                                <label>Clinic Location</label>
+                                <agm-map [latitude]="clinic.location.latitude" [longitude]="clinic.location.longitude"
+                                    [zoom]="clinic.location.zoom" (zoomChange)="zoomChange($event)">
+                                    <agm-marker [latitude]="clinic.location.latitude"
+                                        [longitude]="clinic.location.longitude" [markerDraggable]="true"
+                                        (dragEnd)="dragEnd($event.coords.lat, $event.coords.lng)">
+                                    </agm-marker>
+                                </agm-map>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="m-3 ">
+                    <button (click)="onSubmit()" type="submit" class="btn btn_secondary">Save Changes</button>
+                </div>
+                <div *ngIf="successMessage" class="alert alert-success">
+                    <strong>Success!</strong> {{successMessage}}
+                </div>
+            </div>
+            <!-- /Clinic Info -->
+
+
+
+
+        </div>
+    </div>
+</div>

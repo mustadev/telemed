@@ -1,0 +1,21 @@
+footer {
+    background: rgb(144,120,217);
+background: linear-gradient(0deg, rgba(144,120,217,1) 0%, rgba(255,83,88,1) 88%);
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.btn_link{
+    padding: 5px;
+    margin: 0 1px;
+    color:rgb(53, 48, 48);
+    border-radius: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn_link:hover {
+    background-color:rgb(253, 155, 159);
+}

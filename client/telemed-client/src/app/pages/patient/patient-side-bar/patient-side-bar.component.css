@@ -1,0 +1,20 @@
+.patient-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.active {
+    border-color: #FF5358;
+    border-right-style: solid;
+    border-width: 3px;
+    color: #FF5358;
+}
+
+.active > * {
+    color: #FF5358 !important;
+}
+
+.nav-item > * {
+    color: rgb(99, 88, 88);
+}

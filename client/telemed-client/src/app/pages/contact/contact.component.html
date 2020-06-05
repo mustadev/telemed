@@ -1,0 +1,44 @@
+<section class="cmspage mtb-40">
+    <div class="container">
+      <div class="page-desc">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <h1>Contact</h1>
+            <form (ngSubmit)="onSubmit(); addContact.reset()" #addContact="ngForm">
+              <div class="form-group">
+                <input type="text" name="name" id="name" [(ngModel)]="contact.name" class="form-control" placeholder="Name" required #name="ngModel">
+                <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error">
+                  <div *ngIf="name.errors.required">
+                    Name is required.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" name="email" id="email" [(ngModel)]="contact.email" class="form-control" placeholder="E-Mail" required email #email="ngModel">
+                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+                  <div *ngIf="email.errors.required">Email is required.</div>
+                  <div *ngIf="email.errors.email">Email must be a valid email address.</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" name="phone" id="phone" [(ngModel)]="contact.phone" class="form-control" placeholder="Phone">
+              </div>
+              <div class="form-group">
+                <textarea name="message" id="message" [(ngModel)]="contact.message" rows="5" class="form-control" placeholder="Message" required #message="ngModel"></textarea>
+                <div *ngIf="message.invalid && (message.dirty || message.touched)" class="error">
+                  <div *ngIf="message.errors.required">Message is required.</div>
+                </div>
+              </div>
+              <div class="form-group">
+                <button [disabled]="!addContact.form.valid" class="btn btn-success">Send Message</button>
+              </div>
+            </form>
+            <div *ngIf="successMessage" class="alert alert-success">
+              <strong>Success!</strong> {{successMessage}}
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>

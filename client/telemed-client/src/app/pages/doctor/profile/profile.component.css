@@ -1,0 +1,35 @@
+.doc-img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.doc-name > a {
+    color: rgb(22, 22, 22);
+    padding: 1rem 0;
+}
+
+.service {
+    padding:5px;
+    margin: 2px;
+    border-radius: 5px;
+    color:grey;
+    font-size: small;
+}
+
+
+.app_btn {
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    background-color: #7353D2;
+    border-radius: 10px;
+    text-align: center;
+    color: aliceblue;
+    text-transform: uppercase;
+    box-shadow: 0px 2px 4px -1px rgba(171,158,171,0.77);
+}
+
+.clinic-photo {
+    width:50px;
+    border-radius: 10px;
+}

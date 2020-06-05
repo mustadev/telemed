@@ -1,0 +1,55 @@
+<div class="card m-2">
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-8 col-sm-12">
+                <div class="row text-md-left text-center">
+                    <div class="col-md-4 col-sm-12">
+                        <a routerLink="/doctor/profile/{{doctor?.id}}">
+                            <!-- <img [src]="retrievedAvatar" class="img-fluid" alt="Doctor Image"> -->
+                            <img *ngIf="!showDefaultAvatar" [src]="retrievedAvatar" class="img-fluid w-100"  alt="Doctor Image">
+                            <img *ngIf="showDefaultAvatar" src="assets/img/default-doctor.png"  class="doc-img img-fluid w-100" alt="Doctor Image">
+                       
+                        </a>
+                    </div>
+                    <div class="col-md-8 col-sm-12 text-md-left text-center">
+                        <h4 class="doc-name"><a routerLink="/doctor/profile/{{doctor?.id}}">{{doctor?.firstname | titlecase}} {{doctor?.lastname | titlecase}}</a></h4>
+                        <p class="doc-speciality text-dark">{{doctor?.speciality }}</p>
+                        <h5 class="text_primary">{{doctor?.speciality}}</h5>
+                        <div class="rating">
+                            <app-rating-star [currentRate]="doctor?.rating" ></app-rating-star>
+                            <!-- <ngb-rating [(rate)]="selected" (hover)="hovered=$event" (leave)="hovered=0" [readonly]="readonly"></ngb-rating> -->
+                            <span class="d-inline-block h5">({{doctor?.averageRating}})</span>
+                        </div>
+                        <div class="clinic-details">
+                            <p class="doc-location"><i class="fas fa-map-marker-alt"></i>  {{clinic?.country | titlecase }} {{clinic?.city | titlecase}}</p>
+                            <ul class="clinic-gallery">
+                                <li *ngFor="let photo of clinicPhotos">
+                                    <a routerLink="/doctor/profile/{{doctor?.id}}" data-fancybox="gallery">
+                                    <img [src]="photo" alt="Feature">  
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="clinic-services">
+                            <span class="service border" *ngFor=" let clinicService of clinic?.services"> {{clinicService}} </span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-md-4 col-sm-12 text-md-left text-center">
+                <div class="clini-infos p-2">
+                    <ul>
+                        <li><i class="fa fa-comment"></i> {{doctor?.reviews?.length}} Feedback</li>
+                        <li><i class="fa fa-map-marker-alt"></i> {{clinic?.country + " " + clinic?.city}}</li>
+                        <li><i class="fa fa-money-bill-alt"></i> {{clinic?.minPrice | currency}} - {{clinic?.maxPrice | currency}}  </li>
+                    </ul>
+                </div>
+                <div class="text-center">
+                    <a class="view_pro_btn border" routerLink="/doctor/profile/{{doctor?.id}}">Voir Doctor</a>
+                    <a class="app_btn" routerLink="/booking/{{doctor?.id}}">BOOK APPOINTMENT</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

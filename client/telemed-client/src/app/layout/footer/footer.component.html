@@ -1,0 +1,53 @@
+<footer class="footer p-3 ">
+    <div class="row">
+        <div class="col-lg-5 col-xs-12">
+            <div class="d-flex justify-content-center align-items-center flex-column">
+                <div>
+                    <h3>TeleMed</h3>
+                    <p>A place where patients and doctors meet.</p>
+                </div>
+               
+            </div>
+            
+        </div>
+        <div class="col-lg-5 col-xs-12 d-flex justify-content-around text-center">
+            <nav *ngIf="!showDoctorMenu" >
+                <ul>
+                    <li><h4>Patients</h4></li>
+                    <li class="btn_link"><a class="text-dark"  routerLink="/search">Search for Doctors</a></li>
+                    <li *ngIf="!isLoggedIn"  class="btn_link" ><a *ngIf="!isLoggedIn " class="text-dark" routerLink="/patient/login">Login</a></li>
+                    <li  *ngIf="!isLoggedIn "  class="btn_link"><a class="text-dark"  routerLink="/patient/signup">Sign Up</a></li>
+                    <li *ngIf="showPatientMenu" class="btn_link"  ><a class="text-dark" routerLink="/patient/profile">Patient Dashboard</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li><h4>Doctors</h4></li>
+                    <li *ngIf="!isLoggedIn" class="btn_link" ><a class="text-dark" routerLink="/doctor/login">Login</a></li>
+                    <li *ngIf="!isLoggedIn" class="btn_link" ><a class="text-dark" routerLink="/doctor/signup">Sign Up</a></li>
+                    <li *ngIf="showDoctorMenu" class="btn_link"><a class="text-dark" routerLink="/doctor/appointments"> Appointments</a></li>
+                    <li class="btn_link" ><a class="text-dark"  routerLink="/search">Search</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+
+    <div class="d-flex flex-row justify-content-center">
+        <div class="icon p-2 m-2">
+            <i class="fa fa-rss rss"></i>
+        </div>
+        <div class="icon p-2 m-2">
+            <i class="fa fa-facebook"></i>
+        </div>
+        <div class="icon p-2 m-2">
+            <i class="fa fa-twitter"></i>
+        </div>
+        <div class="icon p-2 m-2">
+            <i class="fa fa-instagram "></i>
+        </div>
+    </div>
+    <p class="p-2 m-2">
+        @ 2020 TeleMed. All Right Reserved.
+    </p>
+</footer>

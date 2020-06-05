@@ -1,0 +1,23 @@
+<form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Review</label> <br>
+        <ng-template #t let-fill="fill">
+            <span class="star" [class.full]="fill === 100">
+              <span class="half" [style.width.%]="fill">&#9733;</span>&#9733;
+            </span>
+          </ng-template>
+          
+          <ngb-rating [(rate)]="rating" [starTemplate]="t" [readonly]="false" [max]="5"></ngb-rating>
+    </div> 
+    <div class="form-group">
+        <label>Your review</label>
+        <textarea id="review_desc" maxlength="500" 
+        class="form-control" name="content" [(ngModel)]="content"></textarea>
+      
+      <div class="d-flex justify-content-between mt-3"><small class="text-muted"><span id="chars">500</span> characters remaining</small></div>
+    </div>
+    <hr>
+    <div class="submit-section">
+        <button type="submit" class="btn btn_primary">Add Review</button>
+    </div>
+</form>

@@ -1,0 +1,70 @@
+<div class="card p-1">
+    <div class="row">
+        <div class="col-12">
+            <div class="row text-center pb-2">
+                <div class="col-12">
+                    <a *ngIf="avatar?.length > 100" data-fancybox="gallery" [href]="avatar">
+                        <img class="img-fluid img-thumbnail doctor-img" [src]="avatar" alt="Doctor Image">
+                    </a>
+                    <a *ngIf="avatar?.length < 100" data-fancybox="gallery" href="assets/img/default-doctor.png">
+                        <img src="assets/img/default-doctor.png" class="img-fluid img-thumbnail doctor-img"
+                            alt="Patient Image">
+                    </a>
+                </div>
+                <div class="col-12">
+                    <h3>Dr. {{doctor?.firstname | titlecase}} {{doctor?.lastname | titlecase }}</h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div routerLinkActive="active">
+                <a class="nav-item" routerLink="/doctor/appointments">
+                    <i class="fa fa-bookmark p-1"aria-hidden="true"></i>
+                    <span>Appointments</span>
+                </a>
+            </div>
+
+        </div>
+        <div class="col-12">
+            <div class="nav-item" routerLinkActive="active">
+                <a routerLink="/doctor/reviews">
+                    <i class="fa fa-reply p-1" aria-hidden="true"></i>
+                    <span>Reviews</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="nav-item" routerLinkActive="active">
+                <a routerLink="/doctor/profile-settings">
+                    <i class="fa fa-user p-1"></i>
+                    <span>Profile Settings</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="nav-item" routerLinkActive="active">
+                <a routerLink="/doctor/clinic-settings">
+                    <i class="fa fa-user p-1"></i>
+                    <span>Clinic Settings</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-12">
+            <div class="nav-item" routerLinkActive="active">
+                <a routerLink="/doctor/change-password">
+                    <i class="fa fa-lock p-1"></i>
+                    <span>Change Password</span>
+                </a>
+            </div>
+        </div>
+        <div class="col-12" (click)="logout()">
+            <div class="nav-item" routerLinkActive="active">
+                <a href="#">
+                    <i class="fa fa-sign-out"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
