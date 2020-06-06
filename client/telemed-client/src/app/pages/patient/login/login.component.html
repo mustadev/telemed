@@ -1,0 +1,60 @@
+<div class="container-fluid m-0 bg-white">
+    <div class="row pt-5 pb-5 ">
+        <div class="col-md-8 offset-md-2">
+
+            <!-- Login Tab Content -->
+            <div class="account-content">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-md-7 col-lg-6 d-none d-md-block">
+                        <img src="assets/img/login-banner.png" class="img-fluid" alt="Login">
+                    </div>
+                    <div class="col-md-12 col-lg-6">
+                        <div>
+                            <h3 class="d-inline">Login</h3>
+                            <div class="text-right"><a class="text_primary" routerLink="/doctor/login">Not a Patient?</a></div>
+                        </div>
+                        <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm"
+                            novalidate>
+                            <div class="form-group">
+                                <div class="alert alert-danger" role="alert" *ngIf="f.submitted && isLoginFailed">
+                                    Login failed: {{ errorMessage }}
+                                </div>
+                            </div>
+                            <div class="form-group form-focus">
+                                <input class="form-control" name="email" [(ngModel)]="form.email" required
+                                    #email="ngModel" type="email" class="form-control floating">
+                                <label class="focus-label">Email</label>
+
+                            </div>
+                            <div class="alert alert-danger" role="alert" *ngIf="f.submitted && email.invalid"> Email is
+                                required!</div>
+                            <div class="form-group form-focus">
+                                <input name="password" [(ngModel)]="form.password" required minlength="6"
+                                    #password="ngModel" type="password" class="form-control floating">
+                                <label class="focus-label">Password</label>
+
+                            </div>
+                            <div class="alert alert-danger" role="alert" *ngIf="f.submitted && password.invalid">
+                                <div *ngIf="password.errors.required">Password is required</div>
+                                <div *ngIf="password.errors.minlength">
+                                    Password must be at least 6 characters
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <a class="forgot-link text_primary" routerLink="/patient/forgot-password">Forgot Password ?</a>
+                            </div>
+                            <button class="btn btn-block btn-lg btn_secondary text-white" type="submit">Login</button>
+                            <div class="text-center text-dark">Don’t have an account?
+                                 <a class="text_primary" routerLink="/patient/signup">Register</a></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- /Login Tab Content -->
+
+        </div>
+    </div>
+
+</div>
+
+<!-- /Page Content -->

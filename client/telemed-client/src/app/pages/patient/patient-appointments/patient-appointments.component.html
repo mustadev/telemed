@@ -1,0 +1,65 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-bar">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-12 col-12">
+                <nav aria-label="breadcrumb" class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                    </ol>
+                </nav>
+                <h2 class="breadcrumb-title">Dashboard</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Breadcrumb -->
+
+<!-- Page Content -->
+<div class="content">
+    <div class="container-fluid">
+
+        <div class="row">
+            <!-- Profile-SideBar -->
+            <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+                <app-patient-side-bar [avatar]="avatar"></app-patient-side-bar>
+            </div>
+
+            <!-- Profile-SideBar -->
+            <div class="col-md-7 col-lg-8 col-xl-9">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <div class="row">
+                            <div class="col-sm">
+                                Doctor
+                            </div>
+                            <div class="col-sm">
+                                Description
+                            </div>
+                            <div class="col-sm">
+                                Appointment Date
+                            </div>
+                            <div class="col-sm">
+                                Booking Date
+                            </div>
+                            <div class="col-sm">
+                                State
+                            </div>
+                            
+                            
+                        </div>
+                    </li>
+                    <app-patient-appointment *ngFor="let appointment of appointments" [appointment]="appointment">
+                    </app-patient-appointment>
+                    <li *ngIf="appointments.length === 0" class="list-group-item">
+                        <h6>You Have No appointments</h6>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<!-- /Page Content -->

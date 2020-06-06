@@ -1,0 +1,49 @@
+<div class="breadcrumb-bar">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-12 col-12">
+                <nav aria-label="breadcrumb" class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Video Chat</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Breadcrumb -->
+
+
+    <div class="container-fluid mb-3">
+        <div class="row">
+            <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+            <!-- <app-doctor-side-bar [avatar]="avatar"></app-doctor-side-bar>  -->
+
+            </div>
+
+
+
+            <div class="col-md-7 col-lg-8 col-xl-9">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                                <video id="locale" width="320" height="240" autoplay controls></video>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                                <video id="remote" width="320" height="240" autoplay controls></video>
+                            </div>
+                            <div class="col-12 ">
+                                <div class="btn btn_primary" (click)="createConv"> Start Video</div>
+                            </div>
+                            <div class="col-12">
+                                {{log}}
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 

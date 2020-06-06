@@ -1,0 +1,43 @@
+<li>
+    <div class="row">
+        <div class="col-md-2 d-none d-md-block border">
+            <div class="row text-center">
+                <div class="col-12"><img *ngIf="avatar?.length > 100" [src]="avatar" alt="Patient Image">
+                    <img class="col img-fluid rounded-circle" *ngIf="avatar?.length < 100" src="assets/img/default-patient.jpeg" alt="Patient Image"></div>
+                <div class="col-12"><span *ngIf="author" class="h4">{{author.firstname | titlecase}} {{author.lastname | titlecase}}</span></div>
+            </div>
+            
+        </div>
+        <div class="col border">
+            <div class="row">
+                <div class="col-lg-12 text-right">
+                    <app-rating-star [currentRate]="review?.rating" [readonly]="true"></app-rating-star>
+                </div>
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <p>{{review?.content}}</p>
+                        </div>
+                        <div class="col-6 d-block d-md-none text-left">
+                            <span *ngIf="author" class="h4">{{author.firstname | titlecase}} {{author.lastname | titlecase}}</span>
+
+                        </div>
+                        <div class="col-md-12 col-6 text-right">
+                            <a (click)="toggleLike()" class="like-btn p-1 m-1">
+                                <i [ngClass]="setClass()"></i> ({{review?.likes?.length}})
+                            </a>
+                            <!-- <a *ngIf="author && currentUserId && author.id == currentUserId" (click)="onEdit()" class="edit-btn">
+                                <i class="fa fa-edit"></i>
+                            </a> -->
+                            <a *ngIf="author && currentUserId && author.id == currentUserId" (click)="onDelete()" class="trash-btn p-1 m-1">
+                                <i class="fa fa-trash"></i>
+                            </a>
+                        </div>
+                       
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</li>

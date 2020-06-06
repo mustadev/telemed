@@ -1,0 +1,19 @@
+<li class="list-group-item">
+    <div class="row">
+        <div class="col-sm">
+            <div class="avatar">
+                <!-- <img class="avatar-img rounded-circle" alt="Doctor Image" [src]="doctorAvatar"> -->
+                <img *ngIf="doctorAvatar.length > 100" [src]="doctorAvatar" alt="Doctor Image">
+                <img *ngIf="doctorAvatar.length < 100" src="assets/img/default-doctor.png"    class="avatar-img rounded-circle" alt="Doctor Image">
+                                      
+            </div>
+            <h6>Dr {{doctor.firstname | titlecase }} {{doctor.lastname | titlecase}}</h6>
+        </div>
+        <div class="col-sm">{{appointment.description | slice:0:30}}</div>
+        <div class="col-sm">{{appointmentDate | date:'medium'}}</div>
+        <div class="col-sm">{{bookingDate | date:'medium'}}</div>
+        <div *ngIf="appointment.state == 'ACCEPTED'" class="col-sm"><span class="badge badge-pill bg-success-light">{{appointment.state | titlecase}}</span></div>
+        <div *ngIf="appointment.state == 'CANCELED'" class="col-sm"><span class="badge badge-pill bg-danger-light">{{appointment.state | titlecase}}</span></div>
+        <div *ngIf="appointment.state == 'PENDING'" class="col-sm"><span class="badge badge-pill badge-warning">{{appointment.state | titlecase}}</span></div>
+    </div>
+</li>

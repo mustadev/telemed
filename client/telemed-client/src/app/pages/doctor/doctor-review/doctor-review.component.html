@@ -1,0 +1,33 @@
+<li style="list-style: none;">
+    <div class="comment">
+        <!-- <img class="avatar avatar-sm rounded-circle" alt="Patient Image" [src]="patientAvatar"> -->
+        <div class="comment-body">
+            <div class="row pl-2">
+                <div class="col-4">
+                    <div class="row">
+                        <img class="avatar avatar-sm rounded-circle" alt="Patient Image" [src]="patientAvatar">
+                    </div>
+
+                    <div class="row mt-2">
+                        <div class="meta-data">
+                            <div class="row">
+                                <span *ngIf="patient" class="comment-author">{{patient.firstname | titlecase}} {{patient.lastname | titlecase}}</span>
+                            </div>
+                            
+                            <div class="row mt-2">
+                                <app-rating-star [currentRate]="review?.rating" [readonly]="true"></app-rating-star>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-8">
+                    <p class="comment-content">
+                        {{review?.content}}
+                    </p>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</li>

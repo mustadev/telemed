@@ -1,0 +1,23 @@
+<!-- Review Listing -->
+<div>
+    <ul class="comments-list">
+        <app-review 
+        *ngFor="let review of reviews" 
+        [review]="review"
+        (deleteReview)="deleteReview($event)"
+        (editReview)="editReview($event)"></app-review>
+    </ul>
+</div>
+<!-- /Review Listing -->
+
+ <!-- Write Review -->
+ <div *ngIf="isPatient" class="write-review">
+    <h4>Write a review for <strong> Dr. {{doctor?.firstname | titlecase}} {{doctor?.lastname | titlecase}}</strong></h4>
+    
+    <!-- Write Review Form -->
+    <app-review-form (addReview)="addReview($event)"></app-review-form>
+    <!-- /Write Review Form -->
+    
+</div>
+<!-- /Write Review -->
+

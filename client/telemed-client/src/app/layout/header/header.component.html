@@ -1,0 +1,69 @@
+<!-- main nav bar -->
+<nav class="navbar navbar-expand-sm">
+    <a class="navbar-brand" [routerLink]="'.'">TeleMed</a>
+
+    <button class="navbar-toggler primary-bg" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">
+        &#9776;
+    </button>
+
+    <div *ngIf="!showPatientMenu && !showDoctorMenu && !showAdminMenu" [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+        <ul class="navbar-nav text-center w-100">
+            <li class="flex-fill">
+            </li>
+            <li class="nav-item" routerLinkActive="active">
+                <a class="nav-link text_primary" [routerLink]="['/patient/signup']" routerLinkActive="active" (click)="isMenuCollapsed = true">Sign up</a>
+            </li>
+            <li class="nav-item btn_primary" routerLinkActive="active">
+                <a class="nav-link" [routerLink]="['/patient/login']"  (click)="isMenuCollapsed = true">Login</a>
+            </li> 
+        </ul>
+    </div>
+
+    <div *ngIf="showPatientMenu && !showDoctorMenu && !showAdminMenu" [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+        <ul class="navbar-nav text-center w-100">
+            <li class="nav-item ">
+                <!-- Step 4: Close the menu when a link is clicked. -->
+                <a class="nav-link text_grey" [routerLink]="['/patient/profile']" routerLinkActive="active" (click)="isMenuCollapsed = true">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text_grey" [routerLink]="['/patient/settings']" routerLinkActive="active" (click)="isMenuCollapsed = true">Settings</a>
+            </li>
+            <li class="flex-fill">
+            </li>
+            <li class="nav-item btn_primary" routerLinkActive="active" *ngIf="isLoggedIn">
+                <a class="nav-link" href="#" (click)="isMenuCollapsed = true; logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+
+    <div *ngIf="!showPatientMenu && showDoctorMenu && !showAdminMenu" [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+        <ul class="navbar-nav text-center w-100">
+            <li class="nav-item ">
+                <a class="nav-link text_grey" [routerLink]="['doctor/appointments']" routerLinkActive="active" (click)="isMenuCollapsed = true">Appointements</a>
+            </li>
+            <li class="flex-fill">
+            </li>
+            <li class="nav-item btn_primary" routerLinkActive="active" *ngIf="isLoggedIn">
+                <a class="nav-link" href="#" (click)="isMenuCollapsed = true; logout()">Logout</a>
+            </li>
+        </ul>
+    </div>
+
+    <div *ngIf="!showPatientMenu && !showDoctorMenu && showAdminMenu" [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+        <!-- admin area -->
+        <!-- <ul class="navbar-nav text-center w-100">
+            <li class="nav-item ">
+                <a class="nav-link text_grey" [routerLink]="['/patient/profile']" routerLinkActive="active" (click)="isMenuCollapsed = true">Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text_grey" [routerLink]="['/patient/settings']" routerLinkActive="active" (click)="isMenuCollapsed = true">Settings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text_grey" [routerLink]="['/search']" routerLinkActive="active" (click)="isMenuCollapsed = true">Search</a>
+            </li>
+            <li class="flex-fill">
+            </li>
+        </ul> -->
+
+    </div>
+</nav>

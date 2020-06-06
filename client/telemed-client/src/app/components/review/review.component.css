@@ -1,0 +1,11 @@
+.liked {
+    color:red;
+}
+
+.trash-btn:hover {
+    background-color: red;
+}
+
+.edit-btn:hover {
+    background-color:#0DB9F2;
+}

@@ -1,0 +1,44 @@
+<div class="row">
+    <!-- Clinic Content -->
+    <div class="col-md-10">
+        <div class="clinic-content">
+            <h4 class="clinic-name">{{clinic?.name}}</h4>
+            <p class="doc-speciality">{{doctor?.speciality}}</p>
+            <!-- <div class="clinic-details mb-0">
+                <h5 class="clinic-direction"> <i class="fas fa-map-marker-alt"></i>
+                    {{clinic?.address}} <br></h5>
+            </div> -->
+            <div class="clinic-details mb-0">
+                <p class="clinic-direction"> <i class="fas fa-map-marker-alt"></i> {{clinic.address}}</p>
+                <ul>
+                    <li *ngFor="let clinicPhoto of clinicPhotos">
+                        <a [href]="clinicPhoto.image" data-fancybox="gallery2">
+                            <img [src]="clinicPhoto.image" alt="Feature Image">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- /Clinic Content -->
+
+    <div class="col-md-2">
+        <div class="consult-price">
+          <i class="fa fa-money" aria-data="hidden"></i>  {{clinic?.consultPrice | currency}}
+        </div>
+    </div>
+    <div  class="col-md-12 mt-5">
+        <h5 class="clinic-direction"> <i class="fas fa-map-marker-alt"></i>
+            Clinic Location <br></h5>
+        <agm-map 
+        [latitude]="clinic.location.latitude" 
+        [longitude]="clinic.location.longitude" 
+        [zoom]="clinic.location.zoom">
+        <agm-marker 
+            [latitude]="clinic.location.latitude" 
+            [longitude]="clinic.location.longitude"
+            [markerDraggable]="false">
+        </agm-marker>
+    </agm-map>
+    </div>
+</div>
