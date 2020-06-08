@@ -50,6 +50,7 @@ import { DoctorChangePasswordComponent } from './pages/doctor/doctor-change-pass
 import { DoctorReviewsComponent } from './pages/doctor/doctor-reviews/doctor-reviews.component';
 import { DoctorReviewComponent } from './pages/doctor/doctor-review/doctor-review.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
+import { VideoChatComponent } from './pages/doctor/video-chat/video-chat.component';
 
 @NgModule({
   declarations: [
@@ -90,7 +91,8 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
     DoctorChangePasswordComponent,
     DoctorReviewsComponent,
     DoctorReviewComponent,
-    SearchBoxComponent
+    SearchBoxComponent,
+    VideoChatComponent
   ],
   imports: [
     BrowserModule,

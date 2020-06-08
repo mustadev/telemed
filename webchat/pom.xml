@@ -51,16 +51,16 @@
       <optional>true</optional>
     </dependency>
 
-    <dependency>
+    <!-- <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-    </dependency>
-
+    </dependency> -->
+<!-- 
     <dependency>
       <groupId>com.telemed.common</groupId>
       <artifactId>common</artifactId>
       <version>0.0.1-SNAPSHOT</version>
-    </dependency>
+    </dependency> -->
 
     <dependency>
       <groupId>org.springframework.boot</groupId>

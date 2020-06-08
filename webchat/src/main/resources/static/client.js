@@ -103,7 +103,7 @@ function initialize() {
             /* handle the error */
             console.log("error adding stream ", JSON.stringify(err));
         });
-    peerConnection.ontrack = getRemoteStream;
+    peerConnection.ontrack = gotRemoteStream;
 }
 
 function createOffer() {
@@ -136,6 +136,7 @@ function handleOffer(offer) {
 
 function handleCandidate(candidate) {
     peerConnection.addIceCandidate(new RTCIceCandidate(candidate));
+    console.log("handel Candidate", JSON.stringify(candidate));
 };
 
 function handleAnswer(answer) {
@@ -151,7 +152,7 @@ function sendMessage() {
 
 //Edit
 
-function getRemoteStream(e) {
+function gotRemoteStream(e) {
     console.log('gotRemoteStream', e.track, e.streams[0]);
 
     // reset srcObject to work around minor bugs in Chrome and Edge.
