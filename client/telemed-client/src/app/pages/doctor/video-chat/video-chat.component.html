@@ -5,18 +5,24 @@
         </div>
         <div class="col-md-7 col-lg-8 col-xl-9">
             <div class="row">
-                <div class="col-6">
-                    <video id="vid1" playsinline autoplay muted></video>
-                    
+                <div class="col-lg-12 col-md-12">
+                    <div id="container">
+                        
+                        <video id="locale" #localeVideo playsinline autoplay muted></video>
+                        <video id="remote" #remoteVideo playsinline autoplay></video>
+                    </div>
                     <br>
-                    <button class="btn btn_primary"   (click)="start()">Start</button>
-                    <button class="btn btn_primary"  id="callButton" [disabled]="callButtonDisabled" (click)="call()">Call</button>
-                    <button  class="btn btn_primary" id="acceptButton" (click)="accept()">Accept</button>
-                    <button class="btn btn_primary"  id="hangUpButton" (click)="stop()">Hang Up</button>
                 </div>
-                <div class="col-6">
-                    <video id="vid2" playsinline autoplay></video>
+                <div class="col-lg-12">
+                    <input type="text" name="myname" [(ngModel)]="myName">
                 </div>
+                <div class="col-12">
+                    <button class="btn btn_secondary"   (click)="startCall()">Start Call</button>
+                    <button class="btn btn_secondary"  (click)="acceptCall()">Accept Call</button>
+                    <button class="btn btn_secondary"   (click)="denyCall()">Deny Call</button>
+                    <button class="btn btn_secondary"   (click)="closeCall()">Deny Call</button>
+                </div>
+                <p>{{callerName}}</p>
             </div>
         </div>
     </div>

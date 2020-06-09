@@ -1,6 +1,7 @@
 // var conn = new WebSocket('ws://localhost:8001/socket');
 console.log("Location Websucket", 'wss://' + location.hostname + (location.port ? ':' + location.port : '') + '/socket')
-var conn = new WebSocket('wss://' + location.hostname + (location.port ? ':' + location.port : '') + '/socket')
+// var conn = new WebSocket('wss://' + location.hostname + (location.port ? ':' + location.port : '') + '/socket')
+var conn = new WebSocket('ws://' + location.hostname + (location.port ? ':' + location.port : '') + '/socket')
 
 const localVideo = document.getElementById('localVideo');
 const remoteVideo = document.getElementById('remoteVideo');
