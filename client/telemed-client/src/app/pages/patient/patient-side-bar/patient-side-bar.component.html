@@ -4,10 +4,10 @@
         <div class="col-12">
             <div class="row text-center pb-2">
                 <div class="col-12">
-                    <a *ngIf="avatar.length > 100" data-fancybox="gallery" [href]="avatar">
+                    <a *ngIf="avatar?.length > 100" data-fancybox="gallery" [href]="avatar">
                         <img class="img-fluid img-thumbnail patient-img" [src]="avatar" alt="Patient Image">
                     </a>
-                    <a *ngIf="avatar.length < 100" data-fancybox="gallery" href="assets/img/default-patient.jpeg">
+                    <a *ngIf="avatar?.length < 100" data-fancybox="gallery" href="assets/img/default-patient.jpeg">
                         <img src="assets/img/default-patient.jpeg" class="img-fluid img-thumbnail patient-img" alt="Patient Image">
                     </a>
                 </div>

@@ -1,7 +1,8 @@
-enum CallState {
-    Calling,
-    CallDenied,
-    CallAccepted,
+export enum CallState {
+    Ongoing,
+    Denied,
+    Ended,
     Ringing,
-    Aidle,
+    Canceled,
+    Idle,
 }

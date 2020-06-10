@@ -1,7 +1,5 @@
-import { Component, OnInit, ElementRef, ViewChild} from '@angular/core';
-import {CallState} from '../../../models/CallState'
-
-
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { CallState } from 'src/app/models/CallState';
 
 const offerOptions: RTCOfferOptions = {
   offerToReceiveAudio: true,
@@ -18,7 +16,6 @@ export class VideoChatComponent implements OnInit {
   @ViewChild('localeVideo') localeVideo: ElementRef;
   @ViewChild('remoteVideo') remoteVideo: ElementRef;
 
-  avatar: any;
   localstream: MediaStream;
 
   // websocket stuff
@@ -29,13 +26,16 @@ export class VideoChatComponent implements OnInit {
 
   // call states
   callState: CallState = CallState.Idle;
+  // callState: CallState = CallState.Ringing;
 
 
+  callerName:string = "";
 
+  avatar:any;
   constructor() { }
 
   ngOnInit(): void {
-    // this.conn = new WebSocket('ws://' + location.hostname + (location.port ? ':' + location.port : '') + '/socket')
+
     this.conn = new WebSocket(this.websocketUrl);
     this.conn.onopen = (ev: Event) => this.onOpen(ev);
     this.conn.onmessage = (msg: MessageEvent) => this.onMessage(msg);
@@ -46,12 +46,13 @@ export class VideoChatComponent implements OnInit {
     console.log('vid2', this.remoteVideo);
   }
 
+
   onOpen(ev) {
     console.log("Connected to the signaling server", ev);
   };
 
-  // on Message Recieved from WebSocket Server;
-  onMessage(msg: MessageEvent) {
+   // on Message Recieved from WebSocket Server;
+   onMessage(msg: MessageEvent) {
     console.log("Got message", msg.data);
     var content = JSON.parse(msg.data);
     var data = content.data;
@@ -76,13 +77,29 @@ export class VideoChatComponent implements OnInit {
       case "deny_call":
         this.handleDenyCall(data);
         break;
-      case "end_call":
-        this.handleEndCall(data);
+      case "cancel_call":
+        this.handleCancelCall(data);
         break;
+      case "end_call":
+          this.handleEndCall(data);
+          break;
       default:
         break;
     }
   };
+
+
+  createOffer() {
+    return this.peerConnection.createOffer(offerOptions).then((offer) => {
+      this.peerConnection.setLocalDescription(offer).then(() => this.send({
+        event: "offer",
+        data: offer
+      }));
+    }, (error) => {
+      alert("Error creating an offer");
+      console.log(error);
+    });
+  } 
 
 
   initializePeer() {
@@ -109,12 +126,17 @@ export class VideoChatComponent implements OnInit {
 
   }
 
+
   initializingCall(): Promise<void> {
     // creating peer connection
     this.initializePeer();
     // Adding support for video
+    // const constraints = {
+    //   video: true, audio: true
+    // };
     const constraints = {
-      video: true, audio: true
+      video: { width: 1280, height: 720 }, 
+      audio: true
     };
     // requesting Media Devices 
     return navigator.mediaDevices.getUserMedia(constraints).
@@ -130,23 +152,6 @@ export class VideoChatComponent implements OnInit {
       });
   }
 
-  send(message) {
-    console.log("sending message", JSON.stringify(message));
-    this.conn.send(JSON.stringify(message));
-  }
-
-
-  createOffer() {
-    return this.peerConnection.createOffer(offerOptions).then((offer) => {
-      this.peerConnection.setLocalDescription(offer).then(() => this.send({
-        event: "offer",
-        data: offer
-      }));
-    }, (error) => {
-      alert("Error creating an offer");
-      console.log(error);
-    });
-  }
 
   handleOffer(offer: RTCSessionDescriptionInit) {
     this.peerConnection.setRemoteDescription(new RTCSessionDescription(offer));
@@ -189,12 +194,18 @@ export class VideoChatComponent implements OnInit {
     // setTimeout(() => this.createOffer(), 400);
     await this.createOffer();
     console.log("call accepted");
-    this.callState = CallState.Ongoing;
   }
 
   handleDenyCall(data) {
     console.log("handle deny call", data);
     this.callState = CallState.Denied;
+    this.stop();
+  }
+
+  handleCancelCall(data) {
+    console.log("handle deny call", data);
+    this.callState = CallState.Canceled;
+    this.stop();
   }
 
   handleEndCall(data) {
@@ -203,19 +214,6 @@ export class VideoChatComponent implements OnInit {
     this.stop();
   }
 
-  callerName: string = "";
-  myName: string = ""
-  startCall() {
-    console.log("starting a call");
-    
-    this.initializingCall().then(() => {
-      this.send({
-        data: this.myName,
-        event: "call"
-      });
-      this.callState = CallState.Ringing;
-    });
-  }
 
   acceptCall() {
     console.log("accept call");
@@ -238,36 +236,34 @@ export class VideoChatComponent implements OnInit {
       event: "deny_call"
     });
     this.callState = CallState.Denied;
+    this.stop();
   }
 
   endCall() {
+    this.stop();
     this.callState = CallState.Ended;
     this.send({
       data: this.callerName,
       event: "end_call"
     });
-    this.stop();
+
   }
 
-  cancelCall(){
-    this.stop();
-    this.callState = CallState.Canceled;
-    this.send({
-      data: this.callerName,
-      event: "cancel_call"
-    });
+  send(message) {
+    console.log("sending message", JSON.stringify(message));
+    this.conn.send(JSON.stringify(message));
   }
+
 
   gotRemoteStream(e) {
-    console.log('gotRemoteStream', e.track, e.streams[0]);
+    // console.log('gotRemoteStream', e.track, e.streams[0]);
     try {
       this.remoteVideo.nativeElement.srcObject = null;
-      this.remoteVideo.nativeElement.srcObject = e.streams[0];;
+      this.remoteVideo.nativeElement.srcObject = e.streams[0];
     } catch (error) {
       console.log('error setting remote stream', error);
       this.remoteVideo.nativeElement.src = URL.createObjectURL(e.streams[0]);
     }
-
   }
 
   gotStream(stream) {
@@ -286,12 +282,10 @@ export class VideoChatComponent implements OnInit {
     this.peerConnection.close();
     this.peerConnection = null;
     this.localstream.getTracks().forEach((track) =>{
-      console.log('stoping doctor locale stream', track);
+      console.log("stoping stream", track);
       track.stop();
     });
-
     this.localeVideo.nativeElement.srcObject = null;
-    
   }
 
 
@@ -310,8 +304,9 @@ export class VideoChatComponent implements OnInit {
   isRinging():boolean {
     return this.callState == CallState.Ringing;
   }
-
   isCanceled():boolean {
     return this.callState == CallState.Canceled;
   }
+
+
 }

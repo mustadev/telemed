@@ -5,11 +5,10 @@
             <div class="col-md-12 col-12">
                 <nav aria-label="breadcrumb" class="page-breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index-2.html">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                        <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Appointments</li>
                     </ol>
                 </nav>
-                <h2 class="breadcrumb-title">Dashboard</h2>
             </div>
         </div>
     </div>
@@ -17,7 +16,6 @@
 <!-- /Breadcrumb -->
 
 <!-- Page Content -->
-<div class="content">
     <div class="container-fluid">
 
         <div class="row">
@@ -52,7 +50,7 @@
                     </li>
                     <app-patient-appointment *ngFor="let appointment of appointments" [appointment]="appointment">
                     </app-patient-appointment>
-                    <li *ngIf="appointments.length === 0" class="list-group-item">
+                    <li *ngIf="appointments?.length === 0" class="list-group-item">
                         <h6>You Have No appointments</h6>
                     </li>
                 </ul>
@@ -61,5 +59,4 @@
 
     </div>
 
-</div>
 <!-- /Page Content -->

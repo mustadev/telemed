@@ -1,4 +1,4 @@
- video {
+video {
     border: 5px solid black;
     /* width: 320px; */
     /* height: 240px; */
@@ -27,6 +27,14 @@
     top: 10px;
     left: 10px;
 }
+/* 
+#idle {
+    display: flex;
+    min-height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+*/
 
 .status {
     background-color: #FF5358;
@@ -44,24 +52,24 @@
     height: 80vh;
 }
 
-.ringing {
+#ringing {
     display: flex;
     justify-content: center;
     justify-items: center;
 }
-.ringing > div {
+#ringing > div {
     width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-self: center;
 }
-.ringing > div > .status {
+#ringing > div > .status {
     align-self: center;
     margin-bottom: 2rem;
 }
 
-.ringing > div > .buttons {
+#ringing > div > .buttons {
     display: flex;
     justify-content: space-evenly; 
 }
@@ -77,5 +85,8 @@
     bottom: 20px;
     text-align: center;
 }
+
+
+
 
 
