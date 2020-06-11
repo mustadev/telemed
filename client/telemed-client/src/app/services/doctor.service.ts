@@ -5,6 +5,7 @@ import { map } from  'rxjs/operators';
 import { Doctor } from '../models/Doctor';
 import { Clinic } from '../models/Clinic';
 import { Password } from '../models/Password';
+import { REST } from '../shared';
 
 const API_URL = 'http://localhost:8080/api/test/';
 
@@ -13,8 +14,11 @@ const API_URL = 'http://localhost:8080/api/test/';
 })
 export class DoctorService {
   doctorUrl:string = "http://localhost:8080/doctors";
+  doctorURL:string = REST + '/doctors';
   
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient) {
+    console.log("doctor URL", this.doctorURL);
+   }
 
   
   getDoctors():Observable<Doctor[]> {
