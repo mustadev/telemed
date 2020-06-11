@@ -1,5 +1,13 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { CallState } from 'src/app/models/CallState';
+import { ActivatedRoute, Params } from '@angular/router';
+import { AppointmentService } from 'src/app/services/appointment.service';
+import { DoctorService } from 'src/app/services/doctor.service';
+import { Appointment } from 'src/app/models/Appointment';
+import { Patient } from 'src/app/models/Patient';
+import { Doctor } from 'src/app/models/Doctor';
+import { PatientService } from 'src/app/services/patient.service';
+import { CountdownComponent } from 'ngx-countdown';
 
 const offerOptions: RTCOfferOptions = {
   offerToReceiveAudio: true,
@@ -16,6 +24,9 @@ export class VideoChatComponent implements OnInit {
   @ViewChild('localeVideo') localeVideo: ElementRef;
   @ViewChild('remoteVideo') remoteVideo: ElementRef;
 
+  @ViewChild('cd') cd:CountdownComponent;
+
+
   localstream: MediaStream;
 
   // websocket stuff
@@ -31,11 +42,53 @@ export class VideoChatComponent implements OnInit {
 
   callerName:string = "";
 
+  appointment:Appointment;
+
+  patient:Patient;
   avatar:any;
-  constructor() { }
+
+  doctor:Doctor;
+  doctorAvatar:any;
+
+  config = {
+    leftTime: 0,
+    size: 'large',
+    demand: true
+  };
+
+  constructor(
+    private route:ActivatedRoute,
+    private appointmentService:AppointmentService,
+    private doctorService:DoctorService,
+    private patientService:PatientService
+  ) { }
 
   ngOnInit(): void {
 
+    // getting patient info
+    this.route.params
+      .subscribe(
+        (params: Params) => {
+          const appointmentId = params['id'];
+          this.appointmentService.getById(appointmentId).subscribe((appointment:Appointment) => {
+            this.appointment = appointment;
+            // get coundown time 
+            this.config.leftTime = Math.floor( new Date(this.appointment.appointmentDate).getTime() - (new Date().getTime())/1000);
+            console.log("left time", this.config.leftTime);
+            this.patientService.getById(appointment.doctorId).subscribe(patient => {
+              this.patient = patient;
+            });
+            this.patientService.getAvatar(appointment.doctorId).subscribe(avatar => {
+              this.avatar = 'data:image/jpeg;base64,' + avatar?.image?.data;
+            });
+            this.doctorService.getById(appointment.doctorId).subscribe(doc => {
+              this.doctor = doc;
+            });
+            this.doctorService.getAvatar(appointment.doctorId).subscribe(avatar => {
+              this.doctorAvatar = 'data:image/jpeg;base64,' + avatar?.image?.data;
+            });
+          })
+        });
     this.conn = new WebSocket(this.websocketUrl);
     this.conn.onopen = (ev: Event) => this.onOpen(ev);
     this.conn.onmessage = (msg: MessageEvent) => this.onMessage(msg);
@@ -44,6 +97,9 @@ export class VideoChatComponent implements OnInit {
   ngAfterViewInit() {
     console.log('vid1', this.localeVideo);
     console.log('vid2', this.remoteVideo);
+    this.config.leftTime = Math.floor( new Date(this.appointment.appointmentDate).getTime() - (new Date().getTime())/1000);
+    this.cd.begin();
+   
   }
 
 
@@ -307,6 +363,14 @@ export class VideoChatComponent implements OnInit {
   isCanceled():boolean {
     return this.callState == CallState.Canceled;
   }
+
+
+
+  onFinished(){
+    console.log("timer finished");
+  }
+
+
 
 
 }

@@ -20,7 +20,7 @@ export class BookingComponent implements OnInit {
   doctorAvatar:any
   patient:Patient;
   appointment:Appointment = new Appointment();
-  appointmentDate:string;
+  // appointmentDate:string;
   successMessage:string="";
   constructor(
     private route:ActivatedRoute, 
@@ -57,18 +57,18 @@ export class BookingComponent implements OnInit {
 }
 
 onSubmit(){
-  console.log("date : ", this.appointmentDate);
-  console.log(JSON.stringify(this.appointment));
-  const appDate = new Date(this.appointmentDate);
+  // console.log("date : ", this.appointmentDate);
+  // console.log(JSON.stringify(this.appointment));
+  // const bookingDate = new Date(Date.now());
   const bookingDate = new Date(); //TODO cela devrait être fait à back-end
   this.appointment.state = "PENDING";
-  this.appointment.appointmentDate = appDate.toISOString();
+  // this.appointment.appointmentDate = appDate.toISOString();
   this.appointment.bookingDate = bookingDate.toISOString();
-  console.log("iso date", appDate.toISOString());
+  console.log("iso date booking", bookingDate.toISOString());
   console.log("appoin", JSON.stringify(this.appointment));
   this.appointmentService.add(this.appointment).subscribe(res => {
     console.log("appointment added", JSON.stringify(res));
-    this.appointmentDate = "";
+    // this.appointmentDate = "";
     this.appointment.description = "";
     this.successMessage = "Appointments Sent";
     setTimeout(()=>{   

@@ -1,5 +1,5 @@
 video {
-    border: 5px solid black;
+    /* border: 5px solid black; */
     /* width: 320px; */
     /* height: 240px; */
     width: 100%;
@@ -86,6 +86,10 @@ video {
     text-align: center;
 }
 
+.countdown{
+    display: block;
+    font-size: large;
+}
 
 
 

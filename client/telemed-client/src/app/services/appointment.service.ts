@@ -31,4 +31,8 @@ export class AppointmentService {
   getAllPatientAppoitments(patientId:string):Observable<Appointment[]>{
     return this.http.get<Appointment[]>(this.appoitmentUrl + '/patient/' + patientId);
   }
+
+  getById(id:string):Observable<Appointment>{
+    return this.http.get<Appointment>(this.appoitmentUrl + '/' + id);
+  }
 }

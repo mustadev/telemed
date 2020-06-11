@@ -1,5 +1,11 @@
 import { Component, OnInit, ElementRef, ViewChild} from '@angular/core';
 import {CallState} from '../../../models/CallState'
+import { ActivatedRoute, Params } from '@angular/router';
+import { Patient } from 'src/app/models/Patient';
+import { PatientService } from 'src/app/services/patient.service';
+import { DoctorService } from 'src/app/services/doctor.service';
+import { AuthService } from 'src/app/services/auth.service';
+import { Doctor } from 'src/app/models/Doctor';
 
 
 
@@ -18,7 +24,7 @@ export class VideoChatComponent implements OnInit {
   @ViewChild('localeVideo') localeVideo: ElementRef;
   @ViewChild('remoteVideo') remoteVideo: ElementRef;
 
-  avatar: any;
+  
   localstream: MediaStream;
 
   // websocket stuff
@@ -30,12 +36,42 @@ export class VideoChatComponent implements OnInit {
   // call states
   callState: CallState = CallState.Idle;
 
+  // patient
+  patient:Patient;
+  patientId:string;
+
+  // doctor info
+  doctor:Doctor;
+  avatar: any;
 
 
-  constructor() { }
+
+  constructor(
+    private route:ActivatedRoute,
+    private patientService:PatientService,
+    private doctorService:DoctorService,
+    private authService:AuthService) { }
 
   ngOnInit(): void {
     // this.conn = new WebSocket('ws://' + location.hostname + (location.port ? ':' + location.port : '') + '/socket')
+    // getting patient info
+    this.route.params
+      .subscribe(
+        (params: Params) => {
+          this.patientId = params['id'];
+          this.patientService.getById(this.patientId).subscribe((patient:Patient) => {
+            this.patient = patient;
+          })
+        });
+
+    this.authService.getCurrentUser().subscribe(res => {
+          this.doctorService.getById(res.id).subscribe(doc => {
+            this.doctor = doc;
+          });
+          this.doctorService.getAvatar(res.id).subscribe(avatar => {
+            this.avatar = 'data:image/jpeg;base64,' + avatar?.image?.data;
+          })
+        })
     this.conn = new WebSocket(this.websocketUrl);
     this.conn.onopen = (ev: Event) => this.onOpen(ev);
     this.conn.onmessage = (msg: MessageEvent) => this.onMessage(msg);
@@ -207,11 +243,23 @@ export class VideoChatComponent implements OnInit {
   myName: string = ""
   startCall() {
     console.log("starting a call");
+
+    if(!this.doctor){
+      console.log("need doctor info first");
+      return;
+    }
+
+    if(!this.patient){
+      console.log("need patient info first");
+      return;
+    }
     
     this.initializingCall().then(() => {
       this.send({
         data: this.myName,
-        event: "call"
+        event: "call",
+        calleeId: this.patient.id,
+        callerId: this.doctor.id,
       });
       this.callState = CallState.Ringing;
     });

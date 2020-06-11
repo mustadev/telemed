@@ -32,7 +32,11 @@
                                 <div *ngIf="isIdle()" id="idle"
                                     class="d-flex justify-content-center align-items-center view-size">
                                     <div class="status">
-                                        <h4>Waiting</h4>
+                                        <div>
+                                            <h4>Waiting</h4>
+                                            <!-- <countdown #cd></countdown> -->
+                                            <!-- <countdown #cd [config]="config" (finished)="onFinished()">$!h!:$!m!:$!s!</countdown> -->
+                                        </div>
                                     </div>
                                 </div>
                                 <div *ngIf="isRinging()" id="ringing" class="view-size">

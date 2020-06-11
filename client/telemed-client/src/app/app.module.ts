@@ -5,6 +5,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AgmCoreModule } from '@agm/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CountdownModule , CountdownGlobalConfig} from 'ngx-countdown';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -104,6 +105,7 @@ import { VideoChatComponent as PatientVideoChatComponent } from './pages/patient
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    CountdownModule, // count down
     NgbModule, // add Ng Bootstrap support
     AgmCoreModule.forRoot({}) // add google map support
   ],
@@ -112,7 +114,8 @@ import { VideoChatComponent as PatientVideoChatComponent } from './pages/patient
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     DoctorAuthGuard,
     PatientAuthGuard,
-    AdminAuthGuard
+    AdminAuthGuard,
+    CountdownGlobalConfig
   ],
   bootstrap: [AppComponent]
 })

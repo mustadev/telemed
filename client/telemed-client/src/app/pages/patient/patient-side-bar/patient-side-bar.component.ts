@@ -2,6 +2,8 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Patient } from 'src/app/models/Patient';
 import { AuthService } from 'src/app/services/auth.service';
 import { PatientService } from 'src/app/services/patient.service';
+import { TokenStorageService } from 'src/app/services/token-storage.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -15,7 +17,9 @@ export class PatientSideBarComponent implements OnInit {
   patient:Patient;
   constructor(
     private authService:AuthService,
-    private patientService:PatientService ) { }
+    private patientService:PatientService,
+    private tokenStorageService: TokenStorageService,
+    private router:Router) { }
 
   ngOnInit(): void {
     this.authService.getCurrentUser().subscribe(user => {
@@ -24,6 +28,15 @@ export class PatientSideBarComponent implements OnInit {
       });
     })
     
+  }
+
+
+  logout() {
+    this.tokenStorageService.signOut();
+    //window.location.reload();
+    this.router.navigate(["home"]).then(() => {
+      window.location.reload();
+    });
   }
 
 }

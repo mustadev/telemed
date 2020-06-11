@@ -17,8 +17,8 @@
 <!-- /Breadcrumb -->
 
 <!-- Page Content -->
-<div class="content">
-    <div class="container-fluid">
+
+    <div class="container-fluid mb-2">
         <div class="row">
             <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
                 <app-doctor-side-bar [avatar]="avatar"></app-doctor-side-bar>
@@ -30,12 +30,12 @@
                     <app-doctor-appointment
                     *ngFor="let appointment of appointments" 
                     [appointment]="appointment"></app-doctor-appointment>
-                    <div *ngIf="appointments.length === 0" class="appointment-list">
+                    <div *ngIf="appointments?.length === 0" class="list-group-item">
                         <h6 >You Have No appointments</h6>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
 <!-- Page Content -->
