@@ -2,14 +2,21 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Appointment } from '../models/Appointment';
 import { Observable } from 'rxjs';
+import { REST } from '../shared';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AppointmentService {
 
+
+
   appoitmentUrl:string= "http://localhost:8080/appointments";
-  constructor(private http:HttpClient) { }
+  appURL:string =  REST + '/appointments';
+  
+  constructor(private http:HttpClient) {
+    console.log("appURL", this.appURL);
+   }
 
 
   add(appointment:Appointment):Observable<Appointment>{
@@ -30,5 +37,9 @@ export class AppointmentService {
 
   getAllPatientAppoitments(patientId:string):Observable<Appointment[]>{
     return this.http.get<Appointment[]>(this.appoitmentUrl + '/patient/' + patientId);
+  }
+
+  getById(id:string):Observable<Appointment>{
+    return this.http.get<Appointment>(this.appoitmentUrl + '/' + id);
   }
 }

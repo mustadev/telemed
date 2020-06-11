@@ -22,11 +22,10 @@
     <div *ngIf="showPatientMenu && !showDoctorMenu && !showAdminMenu" [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
         <ul class="navbar-nav text-center w-100">
             <li class="nav-item ">
-                <!-- Step 4: Close the menu when a link is clicked. -->
-                <a class="nav-link text_grey" [routerLink]="['/patient/profile']" routerLinkActive="active" (click)="isMenuCollapsed = true">Profile</a>
+                <a class="nav-link text_grey" [routerLink]="['/patient/appointments']" routerLinkActive="active" (click)="isMenuCollapsed = true">Appointements</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link text_grey" [routerLink]="['/patient/settings']" routerLinkActive="active" (click)="isMenuCollapsed = true">Settings</a>
+            <li class="nav-item ">
+                <a class="nav-link text_grey" [routerLink]="['/search']" routerLinkActive="active" (click)="isMenuCollapsed = true">Search</a>
             </li>
             <li class="flex-fill">
             </li>
@@ -39,7 +38,7 @@
     <div *ngIf="!showPatientMenu && showDoctorMenu && !showAdminMenu" [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
         <ul class="navbar-nav text-center w-100">
             <li class="nav-item ">
-                <a class="nav-link text_grey" [routerLink]="['doctor/appointments']" routerLinkActive="active" (click)="isMenuCollapsed = true">Appointements</a>
+                <a class="nav-link text_grey" [routerLink]="['doctor/appointments']" routerLinkActive="active" (click)="isMenuCollapsed = true">Dashboard</a>
             </li>
             <li class="flex-fill">
             </li>

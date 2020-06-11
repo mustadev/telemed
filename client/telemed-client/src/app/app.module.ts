@@ -5,6 +5,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { AgmCoreModule } from '@agm/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CountdownModule , CountdownGlobalConfig} from 'ngx-countdown';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -50,46 +51,53 @@ import { DoctorChangePasswordComponent } from './pages/doctor/doctor-change-pass
 import { DoctorReviewsComponent } from './pages/doctor/doctor-reviews/doctor-reviews.component';
 import { DoctorReviewComponent } from './pages/doctor/doctor-review/doctor-review.component';
 import { SearchBoxComponent } from './components/search-box/search-box.component';
+import { VideoChatComponent as DoctorVideoChatComponent } from './pages/doctor/video-chat/video-chat.component';
+import { VideoChatComponent as PatientVideoChatComponent } from './pages/patient/video-chat/video-chat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PatientComponent,
-    DoctorComponent,
     HeaderComponent,
     FooterComponent,
     AboutComponent,
     ContactComponent,
     HomeComponent,
     SearchComponent,
-    ReviewComponent,
-    DoctorSignupComponent,
-    DoctorLoginComponent,
-    DoctorProfileComponent,
-    PatientSignupComponent,
-    PatientLoginComponent,
-    PatientProfileComponent,
-    AdminProfileComponent,
-    AdminLoginComponent,
-    ChangePasswordComponent,
-    ReviewsComponent,
-    DoctorDashBoardComponent,
-    PatientAppointmentsComponent,
-    PatientAppointmentComponent,
-    DoctorProfileSettingsComponent,
-    BookingComponent,
-    RatingStarComponent,
-    ClinicComponent,
-    DoctorOverViewComponent,
-    ReviewFormComponent,
-    ClinicSettingsComponent,
+    DoctorComponent,
     DoctorSideBarComponent,
-    PatientSideBarComponent,
     DoctorAppointmentsComponent,
     DoctorAppointmentComponent,
     DoctorChangePasswordComponent,
     DoctorReviewsComponent,
     DoctorReviewComponent,
+    DoctorVideoChatComponent,
+    DoctorProfileComponent,
+    DoctorSignupComponent,
+    DoctorLoginComponent,
+    PatientLoginComponent,
+    DoctorDashBoardComponent,
+    RatingStarComponent,
+    ClinicComponent,
+    DoctorOverViewComponent,
+    DoctorProfileSettingsComponent,
+    ClinicSettingsComponent,
+    // Patient Components
+    PatientComponent,
+    PatientSignupComponent,
+    PatientAppointmentsComponent,
+    PatientAppointmentComponent,
+    PatientProfileComponent,
+    PatientVideoChatComponent,
+    PatientSideBarComponent,
+    // Admin Components
+    AdminProfileComponent,
+    AdminLoginComponent,
+    // generale Components
+    ChangePasswordComponent,
+    ReviewComponent,
+    ReviewsComponent,
+    BookingComponent,
+    ReviewFormComponent,
     SearchBoxComponent
   ],
   imports: [
@@ -97,6 +105,7 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    CountdownModule, // count down
     NgbModule, // add Ng Bootstrap support
     AgmCoreModule.forRoot({}) // add google map support
   ],
@@ -105,7 +114,8 @@ import { SearchBoxComponent } from './components/search-box/search-box.component
     {provide: LocationStrategy, useClass: HashLocationStrategy},
     DoctorAuthGuard,
     PatientAuthGuard,
-    AdminAuthGuard
+    AdminAuthGuard,
+    CountdownGlobalConfig
   ],
   bootstrap: [AppComponent]
 })

@@ -1,4 +1,5 @@
 export class Appointment {
+    id:string;
     patientId:string;
     doctorId:string;
     state:string;

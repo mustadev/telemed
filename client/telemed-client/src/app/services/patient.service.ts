@@ -3,15 +3,19 @@ import { HttpClient, HttpRequest, HttpEvent} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Patient } from '../models/Patient';
 import { Password } from '../models/Password';
+import { REST } from '../shared';
 
 const baseUrl = 'http://localhost:8080/patients';
+const PATIENT_URL = REST + '/patients';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PatientService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) { 
+    console.log("patient URL ", PATIENT_URL);
+  }
   //TODO Ayoub chaque method doit avoir le type de retour
   getAll() {
     return this.http.get(baseUrl);

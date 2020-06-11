@@ -12,7 +12,8 @@ import { PatientService } from 'src/app/services/patient.service';
 export class DoctorAppointmentComponent implements OnInit {
 
   @Input() appointment:Appointment;
-  appointmentDate:Date;
+  // appointmentDate:Date;
+  // bookingDate:Date;
   patient:Patient;
   avatar:any;
   
@@ -21,7 +22,12 @@ export class DoctorAppointmentComponent implements OnInit {
     private patientService:PatientService) { }
 
   ngOnInit(): void {
-    this.appointmentDate = new Date(this.appointment.appointmentDate);
+    // if (this.appointment.appointmentDate){
+    //   this.appointmentDate = new Date(this.appointment.appointmentDate);
+    // }
+    // if(this.appointment.bookingDate){
+    //   this.bookingDate = new Date(this.appointment.bookingDate);
+    // }
     this.patientService.getById(this.appointment.patientId).subscribe(res => {
       this.patient = res;
     });
@@ -31,6 +37,11 @@ export class DoctorAppointmentComponent implements OnInit {
   }
 
   acceptAppointment(){
+    console.log("appointement date", this.appointment.appointmentDate);
+    if(!this.appointment.appointmentDate){
+      return ;
+    }
+    // this.appointment.appointmentDate = this.appointmentDate.toISOString();
     this.appointment.state = "ACCEPTED";
     this.appointmentService.update(this.appointment).subscribe(res => {
       this.appointment = res;

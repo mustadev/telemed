@@ -22,7 +22,8 @@ import { DoctorAuthGuard } from './services/doctor-auth.guard';
 import { PatientAuthGuard } from './services/patient-auth-guard';
 import { ChangePasswordComponent } from './pages/patient/change-password/change-password.component';
 import { BookingComponent } from './pages/booking/booking.component';
-import { VideoChatComponent } from './pages/doctor/video-chat/video-chat.component';
+import { VideoChatComponent as DoctorVideoChatComponent } from './pages/doctor/video-chat/video-chat.component';
+import { VideoChatComponent as PatientVideoChatComponent } from './pages/patient/video-chat/video-chat.component';
 
 // @ts-ignore
 // @ts-ignore
@@ -65,14 +66,15 @@ const routes: Routes = [
   { path: 'doctor/appointments' , component: DoctorAppointmentsComponent},
   { path: 'doctor/reviews' , component: DoctorReviewsComponent},
   { path: 'doctor/change-password', component: DoctorChangePasswordComponent},
+  { path: 'doctor/chat/video/:id', component: DoctorVideoChatComponent},
   { path: 'patient/profile' , component: PatientProfileComponent},
   { path: 'patient/login' , component: PatientLoginComponent },
   { path: 'patient/signup' , component: PatientSingupComponent },
+  { path: 'patient/chat/video/:id', component: PatientVideoChatComponent},
   { path: 'search' , component: SearchComponent },
   { path: 'booking/:id' , component: BookingComponent},
   { path: 'patient/appointments' , component: PatientAppointmentsComponent},
   { path: 'patient/change-password' , component: ChangePasswordComponent},
-  { path: 'chat/video', component: VideoChatComponent},
   { path: '**', redirectTo: 'home' } //this must be the last
 
 ];

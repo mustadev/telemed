@@ -52,7 +52,7 @@
             <div class="card mb-3">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-12">
                             <div class="form-group">
                                 <label class="control-label">Description</label>
                                 <textarea [(ngModel)]="appointment.description" class="form-control"
@@ -60,14 +60,14 @@
                             </div>
                         </div>
 
-                        <div class="col-md-4">
+                        <!-- <div class="col-md-4">
                             <div class="form-group">
                                 <label class="control-label">Appointment Date</label>
                                 <input [(ngModel)]="appointmentDate" type="datetime-local" class="form-control"
                                     name="appointmentDate">
                             </div>
                             
-                        </div>
+                        </div> -->
                         <div class="col-12 ">
                             <input (click)="onSubmit()" type="submit" class="btn btn_primary " value="Submit">
                         </div>

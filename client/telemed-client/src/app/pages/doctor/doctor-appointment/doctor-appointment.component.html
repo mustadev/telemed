@@ -1,32 +1,88 @@
- <!-- Appointment List -->
- <div class="card">
-     <div class="card-body">
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
+<!-- Appointment List -->
+<div class="card">
+    <div class="card-body">
+        <div class="row" *ngIf="patient">
+            <!-- <div class="col-md-3 col-sm-12">
                 <a routerLink="/patient/profile/{{patient.id}}">
-                    <img *ngIf="avatar.length > 100" [src]="avatar" class="img-fluid rounded booking-doc-img" alt="Patient Image">
-                    <img *ngIf="avatar.length < 100" src="assets/img/default-patient.jpeg" class="img-fluid img-thumbnail rounded" alt="Patient Image">
+                    <img *ngIf="avatar?.length > 100" [src]="avatar" class="img-fluid rounded patient-img" alt="Patient Image">
+                    <img *ngIf="avatar?.length < 100" src="assets/img/default-patient.jpeg" class="img-fluid img-thumbnail rounded patient-img" alt="Patient Image">
                                              
                 </a>
                 <h3><a class="" routerLink="/patient/profile/{{patient.id}}">{{patient.firstname | titlecase }} {{patient.lastname | titlecase }}</a></h3>
+            </div> -->
+            <div class="col-md-3 col-sm-12 border">
+                <a routerLink="/patient/profile/{{patient.id}}">
+                    <img *ngIf="avatar?.length > 100" [src]="avatar" class="img-fluid rounded patient-img"
+                        alt="Patient Image">
+                    <img *ngIf="avatar?.length < 100" src="assets/img/default-patient.jpeg"
+                        class="img-fluid img-thumbnail rounded patient-img" alt="Patient Image">
+
+                </a>
+                <h3><a class="" routerLink="/patient/profile/{{patient.id}}">{{patient.firstname | titlecase }}
+                        {{patient.lastname | titlecase }}</a></h3>
             </div>
-            <div class="col-md-6 col-sm-12">
+            <div class="col-md-9 col-sm-12">
+                <div class="d-flex flex-column w-100 h-100">
+                    <div class="border flex-fill">
+                        <p class="h5">{{appointment.description}}</p>
+                    </div>
+                    <div class="border d-flex flex-column justify-conter-start align-items-start">
+                       
+                            <h6 *ngIf="patient?.email"><i class="fa fa-envelope"></i> {{patient.email}}</h6>
+                        <h6 *ngIf="patient?.phone" class="mb-0"><i class="fa fa-phone"></i> {{patient.phone}}</h6>
+                        <h6  class="mb-0"><i class="fa fa-phone"></i> 0606060606</h6>
+                        <h6 *ngIf="appointment.appointmentDate"><i class="fa fa-clock-o" aria-hidden="true"></i> Appointement : {{appointment.appointmentDate | date: 'short': 'locale'}}</h6>
+                        <h6 *ngIf="appointment.bookingDate"><i class="fa fa-clock-o" aria-hidden="true"></i> Booking Date : {{appointment.bookingDate | date: 'short': 'locale' }}</h6>
+                        <div *ngIf="appointment.state == 'PENDING'" class="form-group p-0 m-1 align-self-end">
+                            <input [(ngModel)]="appointment.appointmentDate" type="datetime-local" class="form-control"
+                                name="appointmentDate">
+                        </div>
+                    </div>
+                    <div class=" border d-flex flex-row justify-content-end">
+                        <div class="flex-fill">
+                            <a *ngIf="appointment.state == 'ACCEPTED'" routerLink="/doctor/chat/video/{{patient.id}}"
+                                class="btn btn-sm bg-success text-left m-1">
+                                <i class="fa fa-video-camera" aria-hidden="true"></i> Appointement
+                            </a>
+                        </div>
+                        <a *ngIf="appointment.state == 'PENDING'" (click)="acceptAppointment()"
+                            class="btn btn-sm bg-success flex-shrink-0 m-1">
+                            <i class="fa fa-check"></i>Accept
+                        </a>
+
+                        <a *ngIf="appointment.state == 'PENDING'" (click)="cancelAppointment()"
+                            class="btn btn-sm bg-danger  m-1">
+                            <i class="fa fa-times"></i> Cancel
+                        </a>
+                        <a *ngIf="appointment.state == 'ACCEPTED'" class="btn btn-sm bg-success  m-1">
+                            <i class="fa fa-check"></i> {{appointment.state}}
+                        </a>
+                        <a *ngIf="appointment.state == 'CANCELED'" class="btn btn-sm  bg-danger  m-1">
+                            <i class="fa fa-times"></i> {{appointment.state}}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-5 col-sm-12">
                 <div class="row">
                     <div class="col-12 p-2">
                         <p class="h5">{{appointment.description}}</p>
                     </div>
                     <div class="col-12">
                         <h6><i class="fa fa-clock"></i> {{appointmentDate | date:'full'}}</h6>
-                        <!-- <h5><i class="fas fa-map-marker-alt"></i> Newyork, United States</h5> -->
+                       
                         <h6 *ngIf="patient?.email"><i class="fa fa-envelope"></i> {{patient.email}}</h6>
                         <h6 *ngIf="patient?.phone" class="mb-0"><i class="fa fa-phone"></i> {{patient.phone}}</h6>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-2 col-sm-12">
-                <a *ngIf="appointment.state == 'PENDING'" (click)="acceptAppointment()" class="btn btn-sm bg-success">
-                    <i class="fa fa-check"></i> Accept
+            </div> -->
+            <!-- <div class="col-md-4 col-sm-12">
+                  <a *ngIf="appointment.state == 'PENDING'" (click)="acceptAppointment()" class="btn btn-sm bg-success flex-shrink-0">
+                 <i class="fa fa-check"></i>
+                     Accept
+                
                 </a>
+                    
                 <a *ngIf="appointment.state == 'PENDING'"  (click)="cancelAppointment()" class="btn btn-sm bg-danger">
                     <i class="fa fa-times"></i> Cancel
                 </a>
@@ -36,9 +92,10 @@
                 <a *ngIf="appointment.state == 'CANCELED'"  class="btn btn-sm  bg-danger">
                     <i class="fa fa-times"></i> {{appointment.state}}
                 </a>
-            </div>
+            
+            </div> -->
         </div>
-     </div>
- </div>
- 
+    </div>
+</div>
+
 <!-- /Appointment List -->

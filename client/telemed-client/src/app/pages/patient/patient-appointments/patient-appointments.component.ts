@@ -13,7 +13,7 @@ import { PatientService } from 'src/app/services/patient.service';
 export class PatientAppointmentsComponent implements OnInit {
 
   avatar:any;
-  appointments:Appointment[]
+  appointments:Appointment[] =[];
   patient:Patient;
   constructor(
     private appointmentService:AppointmentService,

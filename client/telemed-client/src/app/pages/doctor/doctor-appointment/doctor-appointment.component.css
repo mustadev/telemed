@@ -2,3 +2,9 @@
     width: 150px;
     height: 150px;
 }
+
+.patient-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
