@@ -8,7 +8,7 @@
 						<div class="col-md-4 col-sm-12">
 							<a routerLink="/doctor/profile/{{doctor?.id}}">
 								<!-- <img [src]="retrievedAvatar" class="img-fluid" alt="Doctor Image"> -->
-								<img *ngIf="!showDefaultAvatar" [src]="avatar" class="img-fluid w-100"  alt="Doctor Image">
+								<img *ngIf="!showDefaultAvatar" [src]="avatar" class="img-fluid doc-img w-100 "  alt="Doctor Image">
 								<img *ngIf="showDefaultAvatar" src="assets/img/default-doctor.png"  class="doc-img img-fluid w-100" alt="Doctor Image">
 						   
 							</a>

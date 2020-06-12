@@ -7,6 +7,13 @@
         (deleteReview)="deleteReview($event)"
         (editReview)="editReview($event)"></app-review>
     </ul>
+    <div *ngIf="reviews?.length ===0">
+        <div class="card">
+            <div class="card-body">
+                No Reviews
+            </div>
+        </div>
+    </div>
 </div>
 <!-- /Review Listing -->
 
@@ -19,5 +26,6 @@
     <!-- /Write Review Form -->
     
 </div>
+
 <!-- /Write Review -->
 

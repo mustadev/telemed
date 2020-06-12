@@ -39,3 +39,10 @@
     text-transform: uppercase;
     color: #7353D2;
 }
+
+
+.clinic-photo {
+    width:50px;
+    border-radius: 10px;
+}
+

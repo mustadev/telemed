@@ -6,14 +6,13 @@
                     <div class="col-md-4 col-sm-12">
                         <a routerLink="/doctor/profile/{{doctor?.id}}">
                             <!-- <img [src]="retrievedAvatar" class="img-fluid" alt="Doctor Image"> -->
-                            <img *ngIf="!showDefaultAvatar" [src]="retrievedAvatar" class="img-fluid w-100"  alt="Doctor Image">
+                            <img *ngIf="!showDefaultAvatar" [src]="retrievedAvatar" class="img-fluid doc-img w-100"  alt="Doctor Image">
                             <img *ngIf="showDefaultAvatar" src="assets/img/default-doctor.png"  class="doc-img img-fluid w-100" alt="Doctor Image">
                        
                         </a>
                     </div>
                     <div class="col-md-8 col-sm-12 text-md-left text-center">
                         <h4 class="doc-name"><a routerLink="/doctor/profile/{{doctor?.id}}">{{doctor?.firstname | titlecase}} {{doctor?.lastname | titlecase}}</a></h4>
-                        <p class="doc-speciality text-dark">{{doctor?.speciality }}</p>
                         <h5 class="text_primary">{{doctor?.speciality}}</h5>
                         <div class="rating">
                             <app-rating-star [currentRate]="doctor?.rating" ></app-rating-star>
@@ -22,11 +21,19 @@
                         </div>
                         <div class="clinic-details">
                             <p class="doc-location"><i class="fas fa-map-marker-alt"></i>  {{clinic?.country | titlecase }} {{clinic?.city | titlecase}}</p>
-                            <ul class="clinic-gallery">
+                            <!-- <ul class="clinic-gallery">
                                 <li *ngFor="let photo of clinicPhotos">
                                     <a routerLink="/doctor/profile/{{doctor?.id}}" data-fancybox="gallery">
                                     <img [src]="photo" alt="Feature">  
                                     </a>
+                                </li>
+                            </ul> -->
+                            <ul class="d-flex flex-row">
+                                <li class="m-1 clinic-photo" *ngFor="let photo of clinicPhotos">
+                                    <!-- <a routerLink="/doctor/profile/{{doctor?.id}}" data-fancybox="gallery">
+                                    <img class="w-100" [src]="photo" alt="Feature">  
+                                    </a> -->
+                                    <a  data-fancybox="gallery" [href]="photo"><img class="img-fluid w-100" [src]="photo"></a>
                                 </li>
                             </ul>
                         </div>

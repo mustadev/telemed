@@ -170,6 +170,7 @@ export class VideoChatComponent implements OnInit {
   }
 
   send(message) {
+    message.collee = this.patientId;
     console.log("sending message", JSON.stringify(message));
     this.conn.send(JSON.stringify(message));
   }

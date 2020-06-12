@@ -17,10 +17,10 @@
         <div class="container-fluid">
             <div class="row">
                 <!-- Profile Sidebar -->
-                <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+                <div class="col-md-4 col-lg-4 col-xl-3 theiaStickySidebar">
                     <app-doctor-side-bar [avatar]="avatar"></app-doctor-side-bar>
                 </div>
-                <div class="col-md-7 col-lg-8 col-xl-9">
+                <div class="col-md-8 col-lg-8 col-xl-9">
                     <div class="card">
                         <div class="card-body">
                             <div class="row">
@@ -30,10 +30,10 @@
                                         
                                         </ul>
                                     </div> -->
-                                    <ul class="comments-list">
+                                    <ul>
                                         <app-doctor-review *ngFor="let review of reviews" [review]="review">
                                         </app-doctor-review>
-                                        <li style="list-style: none" *ngIf="reviews.length === 0" class="appointments">
+                                        <li style="list-style: none" *ngIf="reviews?.length === 0" class="appointments">
                                             <h6>You Have No Reviews</h6>
                                         </li>
                                     </ul>
