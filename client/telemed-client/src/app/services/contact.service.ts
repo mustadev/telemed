@@ -2,14 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Contact } from '../models/Contact';
-import { REST } from '../shared';
+import { REST, BASE_URL } from '../shared';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
-  contactUrl:string = "http://localhost:8080/contacts";
+  // contactUrl:string = "http://localhost:8080/contacts";
+  contactUrl:string = BASE_URL + "/contacts";
   contactURL:string = REST + '/contacts';
 
   constructor(private http:HttpClient) { 

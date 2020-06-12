@@ -1,6 +1,5 @@
-<li style="list-style: none;">
+<!-- <li style="list-style: none;">
     <div class="comment">
-        <!-- <img class="avatar avatar-sm rounded-circle" alt="Patient Image" [src]="patientAvatar"> -->
         <div class="comment-body">
             <div class="row pl-2">
                 <div class="col-4">
@@ -30,4 +29,46 @@
             
         </div>
     </div>
+</li> -->
+
+<li>
+    <div class="row">
+        <div class="col-md-2 d-none d-md-block ">
+            <div class="row text-center">
+                <div class="col-12"><img *ngIf="avatar?.length > 100" [src]="avatar" alt="Patient Image">
+                    <img class="col img-fluid rounded-circle" *ngIf="avatar?.length < 100" src="assets/img/default-patient.jpeg" alt="Patient Image"></div>
+                <div class="col-12"><span *ngIf="patient" class="h4">{{patient.firstname | titlecase}} {{patient.lastname | titlecase}}</span></div>
+            </div>
+            
+        </div>
+        <div class="col">
+            <div class="row">
+                <div class="col-lg-12 text-right">
+                    <div class="row">
+                        <div class="col-12"><app-rating-star [currentRate]="review?.rating" [readonly]="true"></app-rating-star> </div>
+                        <div class="col-12">
+                            <span><i class="fa fa-thumbs-up"></i> ({{review?.likes?.length}})</span>
+                        </div>
+                    </div>
+                    
+                     
+                </div>
+                <div class="col-lg-12">
+                    <div class="row">
+                        <div class="col-12">
+                            <p class="h5 text-dark">{{review?.content}}</p>
+                        </div>
+                        <div class="col-6 d-block d-md-none text-left">
+                            <span *ngIf="patient" class="h4">{{patient.firstname | titlecase}} {{patient.lastname | titlecase}}</span>
+
+                        </div>
+                       
+                       
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
 </li>
+

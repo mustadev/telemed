@@ -3,13 +3,15 @@ import { Observable } from 'rxjs';
 import { Review } from '../models/Review';
 import { HttpClient } from '@angular/common/http';
 import { Like } from '../models/Like';
-import { REST } from '../shared';
+import { REST, BASE_URL } from '../shared';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ReviewService {
-  doctorUrl:string = "http://localhost:8080/doctors";
+  doctorUrl:string = BASE_URL + "/doctors";
+  // doctorUrl:string = "http://localhost:8080/doctors";
+
   doctorsURL:string = REST +'/doctors'
   // doctorUrl = this.doctorsURL; // test if this works
   constructor(private http:HttpClient) { 

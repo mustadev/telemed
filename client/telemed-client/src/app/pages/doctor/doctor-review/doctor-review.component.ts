@@ -12,15 +12,17 @@ export class DoctorReviewComponent implements OnInit {
 
   @Input() review:Review;
   patient:Patient;
-  patientAvatar:any;
+  avatar:any;
   constructor(private patientService:PatientService) { }
 
   ngOnInit(): void {
+    console.log("patient id!!!!", this.review.patientId);
     this.patientService.getById(this.review.patientId).subscribe(patient => {
       this.patient = patient;
     });
     this.patientService.getAvatar(this.review.patientId).subscribe(avatar => {
-      this.patientAvatar = 'data:image/jpeg;base64,' + avatar.image.data;
+      console.log(JSON.stringify(avatar));
+      this.avatar = 'data:image/jpeg;base64,' + avatar?.image?.data;
     })
   }
 

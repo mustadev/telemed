@@ -1,4 +1,4 @@
-package com.telemed.rest.controllers;
+package com.telemed.airdoc.controllers;
 
 
 import org.junit.jupiter.api.BeforeAll;

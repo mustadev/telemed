@@ -1,4 +1,4 @@
-package com.telemed.rest.controllers;
+package com.mustadev.telemed.controllers;
 
 
 import static org.mockito.Mockito.when;
@@ -12,8 +12,8 @@ import java.util.List;
 import java.util.Optional;
 
 
-import com.telemed.rest.models.Patient;
-import com.telemed.rest.services.PatientService;
+import com.mustadev.telemed.models.Patient;
+import com.mustadev.telemed.services.PatientService;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;

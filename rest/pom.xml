@@ -47,10 +47,10 @@
       <optional>true</optional>
     </dependency>
 
-    <dependency>
+    <!-- <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-    </dependency>
+    </dependency> -->
 
     <dependency>
       <groupId>org.springframework.boot</groupId>
@@ -142,7 +142,7 @@
     <!-- old rest dependacy -->
   </dependencies>
 
-  <dependencyManagement>
+  <!-- <dependencyManagement>
     <dependencies>
       <dependency>
         <groupId>org.springframework.cloud</groupId>
@@ -152,7 +152,7 @@
         <scope>import</scope>
       </dependency>
     </dependencies>
-  </dependencyManagement>
+  </dependencyManagement> -->
 
   <build>
     <plugins>

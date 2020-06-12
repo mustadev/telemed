@@ -1,6 +1,6 @@
 <li>
     <div class="row">
-        <div class="col-md-2 d-none d-md-block border">
+        <div class="col-md-2 d-none d-md-block">
             <div class="row text-center">
                 <div class="col-12"><img *ngIf="avatar?.length > 100" [src]="avatar" alt="Patient Image">
                     <img class="col img-fluid rounded-circle" *ngIf="avatar?.length < 100" src="assets/img/default-patient.jpeg" alt="Patient Image"></div>
@@ -8,7 +8,7 @@
             </div>
             
         </div>
-        <div class="col border">
+        <div class="col">
             <div class="row">
                 <div class="col-lg-12 text-right">
                     <app-rating-star [currentRate]="review?.rating" [readonly]="true"></app-rating-star>

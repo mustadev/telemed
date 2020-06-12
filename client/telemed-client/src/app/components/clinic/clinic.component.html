@@ -10,11 +10,19 @@
             </div> -->
             <div class="clinic-details mb-0">
                 <p class="clinic-direction"> <i class="fas fa-map-marker-alt"></i> {{clinic.address}}</p>
-                <ul>
+                <!-- <ul>
                     <li *ngFor="let clinicPhoto of clinicPhotos">
                         <a [href]="clinicPhoto.image" data-fancybox="gallery2">
                             <img [src]="clinicPhoto.image" alt="Feature Image">
                         </a>
+                    </li>
+                </ul> -->
+                <ul class="d-flex flex-row">
+                    <li class="m-1 clinic-photo" *ngFor="let clinicPhoto of clinicPhotos">
+                        <!-- <a routerLink="/doctor/profile/{{doctor?.id}}" data-fancybox="gallery">
+                        <img class="w-100" [src]="photo" alt="Feature">  
+                        </a> -->
+                        <a  data-fancybox="gallery" [href]="clinicPhoto.image"><img class="img-fluid w-100" [src]="clinicPhoto.image"></a>
                     </li>
                 </ul>
             </div>

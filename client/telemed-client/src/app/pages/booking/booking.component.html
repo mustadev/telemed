@@ -29,7 +29,7 @@
 
                         </a> -->
 
-                        <div class="col-12">
+                        <div class="col-12" *ngIf="doctorAvatar">
                             <a *ngIf="doctorAvatar.length > 100"  data-fancybox="gallery" [href]="doctorAvatar">
                                 <img class="img-fluid img-thumbnail doctor-img" [src]="doctorAvatar" alt="Doctor Image">
                             </a>
@@ -39,7 +39,7 @@
                         </div>
                         
                         <div class="col-12">
-                            <h4><a class="text_secondary" routerLink="/doctor/profile/{{doctor.id}}">Dr. {{doctor?.firstname | titlecase }}
+                            <h4><a class="text_secondary" routerLink="/doctor/profile/{{doctor?.id}}">Dr. {{doctor?.firstname | titlecase }}
                                     {{doctor?.lastname | titlecase }}</a></h4>
                             <app-rating-star [currentRate]="doctor?.rating" [readonly]="true"></app-rating-star>
                         </div>
