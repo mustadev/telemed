@@ -3,9 +3,11 @@ import { HttpClient, HttpRequest, HttpEvent} from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Patient } from '../models/Patient';
 import { Password } from '../models/Password';
-import { REST } from '../shared';
+import { REST, BASE_URL } from '../shared';
 
-const baseUrl = 'http://localhost:8080/patients';
+const baseUrl = BASE_URL + '/patients';
+// const baseUrl = 'http://localhost:8080/patients';
+
 const PATIENT_URL = REST + '/patients';
 
 @Injectable({

@@ -8,6 +8,7 @@ import { Patient } from 'src/app/models/Patient';
 import { Doctor } from 'src/app/models/Doctor';
 import { PatientService } from 'src/app/services/patient.service';
 import { CountdownComponent } from 'ngx-countdown';
+import { BASE_SOCKET_URL } from 'src/app/shared';
 
 const offerOptions: RTCOfferOptions = {
   offerToReceiveAudio: true,
@@ -30,7 +31,8 @@ export class VideoChatComponent implements OnInit {
   localstream: MediaStream;
 
   // websocket stuff
-  websocketUrl = "ws://localhost:8001/socket"
+  websocketUrl = BASE_SOCKET_URL + "/socket"; // production url
+  // websocketUrl = 'ws://localhost:8080/socket' // dev url
   conn: WebSocket;
   peerConnection: RTCPeerConnection;
   dataChannel: RTCDataChannel;

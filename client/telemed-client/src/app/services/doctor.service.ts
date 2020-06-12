@@ -5,15 +5,18 @@ import { map } from  'rxjs/operators';
 import { Doctor } from '../models/Doctor';
 import { Clinic } from '../models/Clinic';
 import { Password } from '../models/Password';
-import { REST } from '../shared';
+import { REST, BASE_URL } from '../shared';
 
-const API_URL = 'http://localhost:8080/api/test/';
+// const API_URL = 'http://localhost:8080/api/test/';
+const API_URL = BASE_URL + '/api/test/';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class DoctorService {
-  doctorUrl:string = "http://localhost:8080/doctors";
+  // doctorUrl:string = "http://localhost:8080/doctors";
+  doctorUrl:string = BASE_URL + "/doctors";
   doctorURL:string = REST + '/doctors';
   
   constructor(private http:HttpClient) {

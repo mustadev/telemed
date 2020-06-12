@@ -42,6 +42,7 @@ export class DoctorAppointmentComponent implements OnInit {
       return ;
     }
     // this.appointment.appointmentDate = this.appointmentDate.toISOString();
+    this.appointment.appointmentDate = new Date(this.appointment.appointmentDate).toISOString(); //fix zone problem
     this.appointment.state = "ACCEPTED";
     this.appointmentService.update(this.appointment).subscribe(res => {
       this.appointment = res;

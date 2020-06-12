@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Appointment } from '../models/Appointment';
 import { Observable } from 'rxjs';
-import { REST } from '../shared';
+import { REST, BASE_URL } from '../shared';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,10 @@ export class AppointmentService {
 
 
 
-  appoitmentUrl:string= "http://localhost:8080/appointments";
+  // appoitmentUrl:string= "http://localhost:8080/appointments";
+  appoitmentUrl:string = BASE_URL + "/appointments";
+  // appoitmentUrl:string= "/appointments";
+
   appURL:string =  REST + '/appointments';
   
   constructor(private http:HttpClient) {
