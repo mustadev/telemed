@@ -15,7 +15,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * Class de configuration de Rest Docomentation.
- * @author Mustapha De BrainStormers
+ * @author Mustapha
  * @since 13-03-2020
  * 
  */
@@ -46,8 +46,8 @@ public class RestDocConfig {
         	.title("TeleMed REST API")
             .description("TeleMed Projet Rest API ")
             .contact(new Contact("Mustapha Ouarrain","github.com/mustadev", "ouarrain.mustapha@gmail.com"))
-            .license("BrainStormers 1.0")
-            .licenseUrl("http://www.brainstromers.com/licenses/LICENSE-2.0.html")
+            .license("Mustapha Ouarrain ")
+            .licenseUrl("http://www.mustadev.com/licenses/LICENSE-2.0.html")
             .version("1.0.0")
             .build();
     }

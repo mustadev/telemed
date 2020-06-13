@@ -6,7 +6,7 @@ services:
     ports:
     - 27017:27017
     command: --smallfiles
-  app:
+  telemed:
     image: telemed
     ports:
     - 8080:8080
