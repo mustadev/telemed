@@ -7,7 +7,7 @@ Visit your Doctor ONLINE.
 
 ```bash
 cd telemed
-mvn Dmaven-test-skip package
+mvn -Dmaven-test-skip package
 ```
 ### Build Docker
 
