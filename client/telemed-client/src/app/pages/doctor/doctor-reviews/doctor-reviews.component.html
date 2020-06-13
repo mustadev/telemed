@@ -1,0 +1,48 @@
+<div class="main-wrapper">
+    <div class="breadcrumb-bar">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-12 col-12">
+                    <nav aria-label="breadcrumb" class="page-breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="#">Patient</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Doctor Reviews</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- Profile Sidebar -->
+                <div class="col-md-4 col-lg-4 col-xl-3 theiaStickySidebar">
+                    <app-doctor-side-bar [avatar]="avatar"></app-doctor-side-bar>
+                </div>
+                <div class="col-md-8 col-lg-8 col-xl-9">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <!-- <div class="widget review-listing">
+                                        
+                                        
+                                        </ul>
+                                    </div> -->
+                                    <ul>
+                                        <app-doctor-review *ngFor="let review of reviews" [review]="review">
+                                        </app-doctor-review>
+                                        <li style="list-style: none" *ngIf="reviews?.length === 0" class="appointments">
+                                            <h6>You Have No Reviews</h6>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

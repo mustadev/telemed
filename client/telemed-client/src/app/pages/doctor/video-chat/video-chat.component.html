@@ -1,0 +1,95 @@
+<div class="container-fluid mb-3 m-2">
+    <div class="row">
+        <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+            <app-doctor-side-bar [avatar]="avatar"></app-doctor-side-bar>
+        </div>
+        <div class="col-md-7 col-lg-8 col-xl-9">
+            <div class="row">
+                <!-- <div class="col-lg-12 col-md-12">
+                    <div id="container">
+                        
+                        <video id="locale" #localeVideo playsinline autoplay muted></video>
+                        <video id="remote" #remoteVideo playsinline autoplay></video>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <input type="text" name="myname" [(ngModel)]="myName">
+                </div>
+                <div class="col-12">
+                    <button class="btn btn_secondary"   (click)="startCall()">Start Call</button>
+                    <button class="btn btn_secondary"  (click)="acceptCall()">Accept Call</button>
+                    <button class="btn btn_secondary"   (click)="denyCall()">Deny Call</button>
+                    <button class="btn btn_secondary"   (click)="closeCall()">End Call</button>
+                </div>
+                <p>{{callerName}}</p> -->
+                <div class="col-lg-12 col-md-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <div id="container">
+                                <div *ngIf="isIdle()" id="idle" class="ringing view-size">
+                                    <div>
+                                        <div class="status">
+                                            <h4>Ready</h4>
+                                        </div>
+                                        <div class="buttons">
+                                            <button class="btn btn_secondary" (click)="startCall()">Call</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div *ngIf="isRinging()" class="ringing view-size">
+                                    <div>
+                                        <div class="status">
+                                            <h4>Ringing</h4>
+                                        </div>
+                                        <div class="buttons">
+                                            <button class="btn btn_secondary" (click)="cancelCall()">Cancel
+                                                Call</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div *ngIf="isEnded()" class="ringing view-size">
+                                    <div>
+                                        <div class="status">
+                                            <h4>Ended</h4>
+                                        </div>
+                                        <div class="buttons">
+                                            <button class="btn btn_secondary" (click)="startCall()">Call</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div *ngIf="isDenied()" class="ringing view-size">
+                                    <div>
+                                        <div class="status">
+                                            <h4>Denied</h4>
+                                        </div>
+                                        <div class="buttons">
+                                            <button class="btn btn_secondary" (click)="startCall()">Call</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div *ngIf="isCanceled()" class="ringing view-size">
+                                    <div>
+                                        <div class="status">
+                                            <h4>Cancled</h4>
+                                        </div>
+                                        <div class="buttons">
+                                            <button class="btn btn_secondary" (click)="startCall()">Call</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <video [hidden]="!isOngoing()" id="locale" #localeVideo playsinline autoplay
+                                    muted></video>
+                                <div *ngIf="isOngoing()" id="ongoing">
+                                    <video *ngIf="isOngoing()" id="remote" #remoteVideo playsinline autoplay></video>
+                                    <button class="btn btn_secondary end-call" (click)="endCall()">End Call</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script> -->

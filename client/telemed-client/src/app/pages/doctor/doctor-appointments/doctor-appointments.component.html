@@ -1,0 +1,41 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-bar">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-12 col-12">
+                <nav aria-label="breadcrumb" class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a routerLink="/home">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Appointments</li>
+                    </ol>
+                </nav>
+                <h2 class="breadcrumb-title">Appointments</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Breadcrumb -->
+
+<!-- Page Content -->
+
+    <div class="container-fluid mb-2">
+        <div class="row">
+            <div class="col-md-5 col-lg-4 col-xl-3 theiaStickySidebar">
+                <app-doctor-side-bar [avatar]="avatar"></app-doctor-side-bar>
+            </div>
+
+
+            <div class="col-md-7 col-lg-8 col-xl-9">
+                <div>
+                    <app-doctor-appointment
+                    *ngFor="let appointment of appointments" 
+                    [appointment]="appointment"></app-doctor-appointment>
+                    <div *ngIf="appointments?.length === 0" class="list-group-item">
+                        <h6 >You Have No appointments</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Page Content -->

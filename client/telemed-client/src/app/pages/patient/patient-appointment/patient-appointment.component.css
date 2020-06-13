@@ -1,0 +1,8 @@
+.cursor-pointer{
+    cursor: pointer !important;
+}
+
+.avatar-img {
+    max-width: 150px;
+    max-height: 150px;
+}

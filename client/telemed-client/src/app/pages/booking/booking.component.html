@@ -1,0 +1,88 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-bar">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-md-12 col-12">
+                <nav aria-label="breadcrumb" class="page-breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a routerLink="/">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Booking</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /Breadcrumb -->
+
+<!-- Page Content -->
+<div class="container mb-2">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <!-- <a routerLink="/doctor/profile/{{doctor.id}}">
+                            <img *ngIf="doctorAvatar.length > 100" [src]="doctorAvatar" alt="Doctor Image">
+                            <img *ngIf="doctorAvatar.length < 100" src="assets/img/default-doctor.png"
+                                alt="Doctor Image">
+
+                        </a> -->
+
+                        <div class="col-12" *ngIf="doctorAvatar">
+                            <a *ngIf="doctorAvatar.length > 100"  data-fancybox="gallery" [href]="doctorAvatar">
+                                <img class="img-fluid img-thumbnail doctor-img" [src]="doctorAvatar" alt="Doctor Image">
+                            </a>
+                            <a *ngIf="doctorAvatar.length < 100"  data-fancybox="gallery" href="assets/img/default-patient.jpeg">
+                                <img src="assets/img/default-doctor.png" class="img-fluid img-thumbnail doctor-img" alt="Doctor Image">
+                            </a>
+                        </div>
+                        
+                        <div class="col-12">
+                            <h4><a class="text_secondary" routerLink="/doctor/profile/{{doctor?.id}}">Dr. {{doctor?.firstname | titlecase }}
+                                    {{doctor?.lastname | titlecase }}</a></h4>
+                            <app-rating-star [currentRate]="doctor?.rating" [readonly]="true"></app-rating-star>
+                        </div>
+                        <!-- <p class="text-muted mb-0"><i class="fas fa-map-marker-alt"></i> , </p> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Schedule Widget -->
+
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label class="control-label">Description</label>
+                                <textarea [(ngModel)]="appointment.description" class="form-control"
+                                    rows="5"></textarea>
+                            </div>
+                        </div>
+
+                        <!-- <div class="col-md-4">
+                            <div class="form-group">
+                                <label class="control-label">Appointment Date</label>
+                                <input [(ngModel)]="appointmentDate" type="datetime-local" class="form-control"
+                                    name="appointmentDate">
+                            </div>
+                            
+                        </div> -->
+                        <div class="col-12 ">
+                            <input (click)="onSubmit()" type="submit" class="btn btn_primary " value="Submit">
+                        </div>
+
+                        
+                        
+
+                    </div>
+                    <div *ngIf="successMessage" class="alert alert-success p-2">
+                        <strong>Success!</strong> {{successMessage}}
+                    </div>
+                </div>
+            </div>
+            <!-- /Schedule Widget -->
+
+        </div>
+    </div>
+</div>

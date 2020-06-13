@@ -1,0 +1,105 @@
+<div class="container">
+	<!-- Doctor Widget -->
+	<div class="card m-2">
+		<div class="card-body">
+			<div class="row">
+				<div class="col-md-8 col-sm-12">
+					<div class="row text-md-left text-center">
+						<div class="col-md-4 col-sm-12">
+							<a routerLink="/doctor/profile/{{doctor?.id}}">
+								<!-- <img [src]="retrievedAvatar" class="img-fluid" alt="Doctor Image"> -->
+								<img *ngIf="!showDefaultAvatar" [src]="avatar" class="img-fluid doc-img w-100 "  alt="Doctor Image">
+								<img *ngIf="showDefaultAvatar" src="assets/img/default-doctor.png"  class="doc-img img-fluid w-100" alt="Doctor Image">
+						   
+							</a>
+						</div>
+						<div class="col-md-8 col-sm-12 text-md-left text-center">
+							<h4 class="doc-name"><a routerLink="/doctor/profile/{{doctor?.id}}">{{doctor?.firstname | titlecase}} {{doctor?.lastname | titlecase}}</a></h4>
+							<p class="doc-speciality text-dark">{{doctor?.speciality }}</p>
+							<h5 class="text_primary">{{doctor?.speciality}}</h5>
+							<div class="rating">
+								<app-rating-star [currentRate]="doctor?.rating" ></app-rating-star>
+								<!-- <ngb-rating [(rate)]="selected" (hover)="hovered=$event" (leave)="hovered=0" [readonly]="readonly"></ngb-rating> -->
+								<span class="d-inline-block h5">({{doctor?.averageRating}})</span>
+							</div>
+							<div class="clinic-details">
+								<p class="doc-location"><i class="fa fa-map-marker" aria-hidden="true"></i>  {{clinic?.country | titlecase }} {{clinic?.city | titlecase}}</p>
+								<ul class="d-flex flex-row">
+									<li class="m-1 clinic-photo" *ngFor="let photo of clinicPhotos">
+										<!-- <a routerLink="/doctor/profile/{{doctor?.id}}" data-fancybox="gallery">
+										<img class="w-100" [src]="photo" alt="Feature">  
+										</a> -->
+										<a  data-fancybox="gallery" [href]="photo"><img class="img-fluid w-100" [src]="photo"></a>
+									</li>
+								</ul>
+							</div>
+							<div class="clinic-services">
+								<span class="service border" *ngFor=" let clinicService of clinic?.services"> {{clinicService}} </span>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="col-md-4 col-sm-12 text-md-left text-center">
+					<div class="clini-infos p-2">
+						<ul>
+							<li><i class="fa fa-comment"></i> {{doctor?.reviews?.length}} Feedback</li>
+							<li><i class="fa fa-map-marker" aria-hidden="true"></i> {{clinic?.country + " " + clinic?.city | titlecase}}</li>
+							<li><i class="fa fa-money" aria-hidden="true"></i> {{clinic?.minPrice | currency}} - {{clinic?.maxPrice | currency}}  </li>
+						</ul>
+					</div>
+					<div class="text-center">
+						<a class="app_btn" routerLink="/booking/{{doctor?.id}}">MAKE AN APPOINTMENT</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!-- /Doctor Widget -->
+
+
+	<!-- Doctor Details Tab -->
+	<div class="card m-2">
+
+
+		<div class="card-body pt-0">
+
+			<!-- Tab Menu -->
+			<ul ngbNav #nav="ngbNav" class="nav-tabs">
+				<li [ngbNavItem]="1">
+					<a ngbNavLink>Overview</a>
+					<ng-template ngbNavContent>
+						<app-over-view [doctor]="doctor" [clinic]="clinic"></app-over-view>
+					</ng-template>
+				</li>
+				<li [ngbNavItem]="2">
+					<a ngbNavLink>Clinic</a>
+					<ng-template ngbNavContent>
+						<app-clinic *ngIf="clinic" [clinic]="clinic" [doctor]="doctor"></app-clinic>
+					</ng-template>
+				</li>
+				<li [ngbNavItem]="3">
+					<a ngbNavLink>Reviews</a>
+					<ng-template ngbNavContent>
+						<app-reviews (refresh)="refresh()" *ngIf="doctor" [doctor]="doctor" [isPatient]="isPatient">
+						</app-reviews>
+					</ng-template>
+				</li>
+			</ul>
+			<!-- /Tab Menu -->
+
+
+			
+			<!-- Tab Content -->
+			<div [ngbNavOutlet]="nav" class="mt-2"></div>
+			<!-- /Tab Content -->
+		</div>
+
+
+	</div>
+	<!-- /Doctor Details Tab -->
+
+
+
+</div>

@@ -1,0 +1,30 @@
+.navbar {
+    background-color: white;
+    color:black;
+    padding: 1rem;
+    margin-bottom: 10px;
+    box-shadow: 0px 2px 4px -1px rgba(171,158,171,0.77);
+}
+
+.navbar * {
+    color: inherit;
+}
+
+.nav-item {
+    padding: 0 10px;
+    margin: 0 5px  ;
+    border-radius: 25px;
+}
+
+.nav-item:hover {
+    box-shadow: 0px 2px 4px -1px rgba(171,158,171,0.77);
+}
+
+:root {
+    --main-bg-color: red;
+}
+.active {
+    opacity: 0.7;
+    color:black;
+}
+

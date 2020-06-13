@@ -1,0 +1,6 @@
+/*validation*/
+
+.ng-valid[required], .ng-valid.required {border: 1px solid #42A948;}
+.error {color:#ff0000;}
+.success { color:green; }
+.contact-message { text-align: center; }
