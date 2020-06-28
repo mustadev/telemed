@@ -9,7 +9,7 @@ import com.mustadev.telemed.models.Admin;
  * une services  pour accéder et modifier la base de données
  * de Admin
  *  
- * @author Mustapha Ouarrain
+ * @author Mustapha mustadev
  * @since version 0.0.1
  */
 

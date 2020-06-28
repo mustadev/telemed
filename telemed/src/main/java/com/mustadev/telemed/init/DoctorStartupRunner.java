@@ -2,7 +2,6 @@ package com.mustadev.telemed.init;
 
 import java.util.Arrays;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import org.slf4j.Logger;
@@ -17,8 +16,6 @@ import com.mustadev.telemed.models.Clinic;
 import com.mustadev.telemed.models.ClinicLocation;
 import com.mustadev.telemed.models.Doctor;
 import com.mustadev.telemed.models.ERole;
-import com.mustadev.telemed.models.Like;
-import com.mustadev.telemed.models.Review;
 import com.mustadev.telemed.models.Role;
 import com.mustadev.telemed.services.DoctorService;
 import com.mustadev.telemed.services.ReviewService;

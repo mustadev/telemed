@@ -9,7 +9,7 @@ import com.mustadev.telemed.models.Contact;
 
 /**
  * Service de getion des images des utilisateurs
- * @author Mustapha Ouarrain
+ * @author Mustapha mustadev
  *
  */
 public interface ContactService {

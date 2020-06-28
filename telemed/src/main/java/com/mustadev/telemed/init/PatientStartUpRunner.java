@@ -17,7 +17,7 @@ import com.mustadev.telemed.repositories.PatientRepository;
 /**
  * cette classe sert à créer une base composée des patients, à fin que lorsque on veut tester 
  * le code on aura un example pour le vérifier!!!
- * @author Ayoub BenHaimoud<ayoubbenhaimoud@gmail.com>
+ * @author Mustapha mustadev
  * @since 20-03-2020
  *
  */

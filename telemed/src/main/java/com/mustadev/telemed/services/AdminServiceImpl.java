@@ -11,7 +11,7 @@ import com.mustadev.telemed.repositories.AdminRepository;
 
 /**
  * implementation de {@link AdminService AdminService.class}
- * @author Mustapha Ouarrain
+ * @author Mustapha mustadev
  * @since version 0.0.1
  * 
  */

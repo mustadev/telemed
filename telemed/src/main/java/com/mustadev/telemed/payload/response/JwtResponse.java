@@ -3,7 +3,7 @@ package com.mustadev.telemed.payload.response;
 import java.util.List;
 
 /**
- * @author Mustapha Ouarrain
+ * @author Mustapha mustadev
  * @since version 1.0.0
  * JSON Web Token Response
  */

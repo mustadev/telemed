@@ -12,7 +12,7 @@ import com.mustadev.telemed.services.AdminService;
 
 
 /**
- * @author Mustapha Ouarrain
+ * @author Mustapha mustadev
  * @since version 1.0.0
  * 
  */

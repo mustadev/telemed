@@ -77,10 +77,13 @@ export class VideoChatComponent implements OnInit {
             // get coundown time 
             this.config.leftTime = Math.floor( new Date(this.appointment.appointmentDate).getTime() - (new Date().getTime())/1000);
             console.log("left time", this.config.leftTime);
-            this.patientService.getById(appointment.doctorId).subscribe(patient => {
+            this.patientService.getById(appointment.patientId).subscribe(patient => {
               this.patient = patient;
+              this.conn = new WebSocket(this.websocketUrl +'?userId=' + this.patient.id);
+              this.conn.onopen = (ev: Event) => this.onOpen(ev);
+              this.conn.onmessage = (msg: MessageEvent) => this.onMessage(msg);
             });
-            this.patientService.getAvatar(appointment.doctorId).subscribe(avatar => {
+            this.patientService.getAvatar(appointment.patientId).subscribe(avatar => {
               this.avatar = 'data:image/jpeg;base64,' + avatar?.image?.data;
             });
             this.doctorService.getById(appointment.doctorId).subscribe(doc => {
@@ -91,16 +94,14 @@ export class VideoChatComponent implements OnInit {
             });
           })
         });
-    this.conn = new WebSocket(this.websocketUrl);
-    this.conn.onopen = (ev: Event) => this.onOpen(ev);
-    this.conn.onmessage = (msg: MessageEvent) => this.onMessage(msg);
+   
   }
 
   ngAfterViewInit() {
     console.log('vid1', this.localeVideo);
     console.log('vid2', this.remoteVideo);
-    this.config.leftTime = Math.floor( new Date(this.appointment.appointmentDate).getTime() - (new Date().getTime())/1000);
-    this.cd.begin();
+    this.config.leftTime = Math.floor( new Date(this.appointment?.appointmentDate).getTime() - (new Date().getTime())/1000);
+    this.cd?.begin();
    
   }
 
@@ -165,7 +166,11 @@ export class VideoChatComponent implements OnInit {
       iceServers: [
         { urls: "stun:23.21.150.121" },
         { urls: "stun:stun.l.google.com:19302" },
-        { urls: "turn:numb.viagenie.ca", "credential": "webrtcdemo", "username": "louis@mozilla.com" }
+        {
+          urls: 'turn:numb.viagenie.ca',
+          credential: 'muazkh',
+          username: 'webrtc@live.com'
+      },
       ]
     }
     this.peerConnection = new RTCPeerConnection(configuration);
@@ -308,16 +313,19 @@ export class VideoChatComponent implements OnInit {
   }
 
   send(message) {
+    message.calleeId = this.doctor.id;
+    console.log("doctor ID :::::" + this.doctor.id);
     console.log("sending message", JSON.stringify(message));
     this.conn.send(JSON.stringify(message));
   }
 
 
   gotRemoteStream(e) {
-    // console.log('gotRemoteStream', e.track, e.streams[0]);
+    console.log('gotRemoteStream', e.track, e.streams[0]);
     try {
       this.remoteVideo.nativeElement.srcObject = null;
       this.remoteVideo.nativeElement.srcObject = e.streams[0];
+      console.log("remote stream from video element!!!", this.remoteVideo.nativeElement.srcObject);
     } catch (error) {
       console.log('error setting remote stream', error);
       this.remoteVideo.nativeElement.src = URL.createObjectURL(e.streams[0]);
@@ -337,7 +345,7 @@ export class VideoChatComponent implements OnInit {
 
   stop() {
     console.log('Ending Call' + '\n\n');
-    this.peerConnection.close();
+    this.peerConnection?.close();
     this.peerConnection = null;
     this.localstream.getTracks().forEach((track) =>{
       console.log("stoping stream", track);

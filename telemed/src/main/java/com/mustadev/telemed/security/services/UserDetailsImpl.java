@@ -15,7 +15,7 @@ import com.mustadev.telemed.models.Patient;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- * @author Mustapha Ouarrain
+ * @author Mustapha mustadev
  * @since version 1.0.0
  * 
  */

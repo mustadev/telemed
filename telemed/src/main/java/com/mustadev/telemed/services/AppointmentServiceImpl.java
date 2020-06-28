@@ -55,5 +55,10 @@ public class AppointmentServiceImpl implements AppointmentService {
 	@Override
 	public Optional<List<Appointment>> findAppotByPatientId(String patientId) {
 		return Optional.of(appointmentRepository.findByPatientId(patientId));
-	}
+    }
+    
+    @Override
+    public void deleteAll(){
+        appointmentRepository.deleteAll();
+    }
 }

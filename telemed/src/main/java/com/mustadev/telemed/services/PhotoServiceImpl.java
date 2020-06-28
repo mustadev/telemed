@@ -11,7 +11,7 @@ import com.mustadev.telemed.repositories.PhotoRepository;
 
 /**
  * Service de gestion des images des utilisateurs
- * @author Mustapha Ouarrain
+ * @author Mustapha mustadev
  * @since version 0.0.2
  */
 

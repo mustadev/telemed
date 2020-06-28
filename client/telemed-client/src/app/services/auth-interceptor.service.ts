@@ -19,6 +19,11 @@ export class AuthInterceptor implements HttpInterceptor {
       headers = headers.set(TOKEN_HEADER_KEY, 'Bearer ' + token);
     }
 
+     // If you are calling an outside domain then do not add the token.
+    // if (!req.url.match(/localhost:8080\//)) { // check if match works first. 
+    //   return req;
+    // }
+
     if (userType != null) {
       console.log("userType", userType);
       headers = headers.set(USER_TYPE_HEADER_KEY, userType);

@@ -20,7 +20,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 /**
  * le Model Doctor 
- * @author Mustapha Ouarrain
+ * @author Mustapha mustadev
  * @since version 0.0.1
  * 
  */

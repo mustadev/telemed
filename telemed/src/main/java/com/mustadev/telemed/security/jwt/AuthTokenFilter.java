@@ -24,7 +24,7 @@ import com.mustadev.telemed.security.services.PatientDetailsServiceImpl;
 import com.mustadev.telemed.security.services.UserDetailsImpl;
 
 /**
- * @author Mustapha Ouarrain
+ * @author Mustapha mustadev
  * @since version 1.0.0
  *
  */

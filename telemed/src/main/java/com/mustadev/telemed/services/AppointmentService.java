@@ -53,4 +53,9 @@ public interface AppointmentService {
      */
     void deleteAppointmentById(String id);
 
+    /**
+	 * Supprimer tous les ronder-vous
+	 */
+	void deleteAll();
+
 }
