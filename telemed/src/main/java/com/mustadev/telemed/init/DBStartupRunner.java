@@ -8,6 +8,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import com.mustadev.telemed.services.AdminService;
+import com.mustadev.telemed.services.AppointmentService;
 import com.mustadev.telemed.services.DoctorService;
 import com.mustadev.telemed.services.PatientService;
 import com.mustadev.telemed.services.PhotoService;
@@ -35,6 +36,9 @@ public class DBStartupRunner implements CommandLineRunner {
 	
 	@Autowired
 	private PhotoService photoService;
+
+	@Autowired
+	private AppointmentService appointmentService;
 	
 	@Autowired
 	private RoleService roleService;
@@ -45,6 +49,7 @@ public class DBStartupRunner implements CommandLineRunner {
 		roleService.deleteAll();
 		photoService.deleteAll();
 		reviewService.deleteAll();
+		appointmentService.deleteAll();
 		adminService.deleteAll();
 		doctorService.deleteAll();
 		patientService.deleteAll();

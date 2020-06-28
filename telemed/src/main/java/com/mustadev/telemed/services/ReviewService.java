@@ -7,7 +7,7 @@ import com.mustadev.telemed.models.Review;
 
 /**
  * Service de gestion des revues
- * @author Mustapha Ouarrain
+ * @author Mustapha mustadev
  * @since version 0.0.2
  */
 public interface ReviewService {

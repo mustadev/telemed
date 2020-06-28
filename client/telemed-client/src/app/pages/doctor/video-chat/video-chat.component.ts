@@ -69,15 +69,15 @@ export class VideoChatComponent implements OnInit {
     this.authService.getCurrentUser().subscribe(res => {
           this.doctorService.getById(res.id).subscribe(doc => {
             this.doctor = doc;
+            console.log("socket url", this.websocketUrl);
+            this.conn = new WebSocket(this.websocketUrl + '?userId=' + this.doctor.id);
+            this.conn.onopen = (ev: Event) => this.onOpen(ev);
+            this.conn.onmessage = (msg: MessageEvent) => this.onMessage(msg);
           });
           this.doctorService.getAvatar(res.id).subscribe(avatar => {
             this.avatar = 'data:image/jpeg;base64,' + avatar?.image?.data;
           })
         });
-    console.log("socket url", this.websocketUrl);
-    this.conn = new WebSocket(this.websocketUrl);
-    this.conn.onopen = (ev: Event) => this.onOpen(ev);
-    this.conn.onmessage = (msg: MessageEvent) => this.onMessage(msg);
   }
 
   ngAfterViewInit() {
@@ -129,7 +129,11 @@ export class VideoChatComponent implements OnInit {
       iceServers: [
         { urls: "stun:23.21.150.121" },
         { urls: "stun:stun.l.google.com:19302" },
-        { urls: "turn:numb.viagenie.ca", "credential": "webrtcdemo", "username": "louis@mozilla.com" }
+        {
+          urls: 'turn:numb.viagenie.ca',
+          credential: 'muazkh',
+          username: 'webrtc@live.com'
+      },
       ]
     }
     this.peerConnection = new RTCPeerConnection(configuration);
@@ -170,7 +174,7 @@ export class VideoChatComponent implements OnInit {
   }
 
   send(message) {
-    message.collee = this.patientId;
+    message.calleeId = this.patient.id;
     console.log("sending message", JSON.stringify(message));
     this.conn.send(JSON.stringify(message));
   }
@@ -313,7 +317,7 @@ export class VideoChatComponent implements OnInit {
   gotRemoteStream(e) {
     console.log('gotRemoteStream', e.track, e.streams[0]);
     try {
-      this.remoteVideo.nativeElement.srcObject = null;
+      // this.remoteVideo.nativeElement.srcObject = null;
       this.remoteVideo.nativeElement.srcObject = e.streams[0];;
     } catch (error) {
       console.log('error setting remote stream', error);

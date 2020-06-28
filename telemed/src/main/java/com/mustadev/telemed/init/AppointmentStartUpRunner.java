@@ -18,8 +18,7 @@ import com.mustadev.telemed.repositories.AppointmentRepository;
 /**
  * cette classe sert à créer une base composée des patients, à fin que lorsque on veut tester 
  * le code on aura un example pour le vérifier!!!
- * @author Ayoub BenHaimoud<ayoubbenhaimoud@gmail.com>
- * @since 20-03-2020
+ * @since version 0.0.1
  *
  */
 @Order(3)
@@ -38,38 +37,38 @@ public class AppointmentStartUpRunner implements CommandLineRunner {
    	
 	//supprimer les patientes
 	logger.info("removing all databases records");
-	appointmentRepository.deleteAll();
+	// appointmentRepository.deleteAll();
 	
 	
 	//------------------------------------------------------------------------------
-	Appointment appointment = new Appointment();
-	appointment.setDoctorId("doctorId");
-	appointment.setPatientId("patientId");
-	appointment.setAppointmentDate(new Date());
-	appointment.setBookingDate( null);
-	appointment.setDescription("i feel sickness !");
-	appointment.setState("PENGING");
-	Appointment appointment1 = appointmentRepository.save(appointment);
-	logger.debug("id: " +appointment1.getId());
-    logger.debug("appointment "+appointment1.getId() + "saved");
-    Appointment appointment2 = new Appointment();
-    appointment2.setDoctorId("doctorId2");
-    appointment2.setPatientId("patientId");
-    appointment2.setAppointmentDate(new Date());
-    appointment2.setBookingDate( null);
-    appointment2.setDescription("i feel sickness !");
-    appointment2.setState("PENDING");
-	appointment2 = appointmentRepository.save(appointment2);
-	logger.debug("id: " +appointment2.getId());
-    logger.debug("appointment "+appointment2.getId() + "saved");
+	// Appointment appointment = new Appointment();
+	// appointment.setDoctorId("doctorId");
+	// appointment.setPatientId("patientId");
+	// appointment.setAppointmentDate(new Date());
+	// appointment.setBookingDate( null);
+	// appointment.setDescription("i feel sickness !");
+	// appointment.setState("PENGING");
+	// Appointment appointment1 = appointmentRepository.save(appointment);
+	// logger.debug("id: " +appointment1.getId());
+    // logger.debug("appointment "+appointment1.getId() + "saved");
+    // Appointment appointment2 = new Appointment();
+    // appointment2.setDoctorId("doctorId2");
+    // appointment2.setPatientId("patientId");
+    // appointment2.setAppointmentDate(new Date());
+    // appointment2.setBookingDate( null);
+    // appointment2.setDescription("i feel sickness !");
+    // appointment2.setState("PENDING");
+	// appointment2 = appointmentRepository.save(appointment2);
+	// logger.debug("id: " +appointment2.getId());
+    // logger.debug("appointment "+appointment2.getId() + "saved");
     
     //------------------------------------------------------------------------------
     
   
-	System.out.println("appointments saved !");
+	// System.out.println("appointments saved !");
 
 
-	System.out.println("finished");
+	// System.out.println("finished");
     }
 
 

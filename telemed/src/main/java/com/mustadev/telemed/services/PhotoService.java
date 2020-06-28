@@ -7,7 +7,7 @@ import com.mustadev.telemed.models.Photo;
 
 /**
  * Service de gestion des images des utilisateurs
- * @author Mustapha Ouarrain
+ * @author Mustapha mustadev
  *
  */
 public interface PhotoService {

@@ -24,7 +24,7 @@ import com.mustadev.telemed.security.services.DoctorDetailsServiceImpl;
 import com.mustadev.telemed.security.services.PatientDetailsServiceImpl;
 
 /**
- * @author Mustapha Ouarrain
+ * @author Mustapha mustadev
  * @since version 1.0.0
  * Jwt Security Configuration 
  */
@@ -79,7 +79,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.antMatchers("/doctors/**").permitAll()
 				.antMatchers("/patients/**").permitAll()
 				.antMatchers("/clinics/**").permitAll()
-				.antMatchers("/**").permitAll() //TODO Mustapha Delete this.
+				.antMatchers("/socket**").permitAll() 
+				// just to reload.
 				.anyRequest()
 				.authenticated();
 

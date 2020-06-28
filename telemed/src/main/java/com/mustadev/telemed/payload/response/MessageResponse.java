@@ -1,7 +1,7 @@
 package com.mustadev.telemed.payload.response;
 
 /**
- * @author Mustapha Ouarrain
+ * @author Mustapha mustadev
  * @since version 1.0.0
  * Message Response
  */

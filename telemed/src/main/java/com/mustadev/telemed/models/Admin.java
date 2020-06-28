@@ -19,7 +19,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 /**
  *  classe "Admin" 
- * @author Mustapha Ouarrain
+ * @author Mustapha mustadev
  * @since version 0.0.2
  * 
  */

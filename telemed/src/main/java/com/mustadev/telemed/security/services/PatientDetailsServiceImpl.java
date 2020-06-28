@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.mustadev.telemed.services.PatientService;
 
 /**
- * @author Mustapha Ouarrain
+ * @author Mustapha mustadev
  * @since version 1.0.0
  * 
  */
