@@ -79,6 +79,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 				.antMatchers("/doctors/**").permitAll()
 				.antMatchers("/patients/**").permitAll()
 				.antMatchers("/clinics/**").permitAll()
+				.antMatchers("/**").permitAll()
 				.antMatchers("/socket**").permitAll() 
 				// just to reload.
 				.anyRequest()

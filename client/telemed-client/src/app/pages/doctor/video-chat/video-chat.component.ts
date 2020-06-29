@@ -6,7 +6,8 @@ import { PatientService } from 'src/app/services/patient.service';
 import { DoctorService } from 'src/app/services/doctor.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { Doctor } from 'src/app/models/Doctor';
-import { BASE_URL, BASE_SOCKET_URL } from 'src/app/shared';
+// import { BASE_URL, BASE_SOCKET_URL } from 'src/app/shared';
+import { environment } from 'src/environments/environment';
 
 
 
@@ -29,7 +30,7 @@ export class VideoChatComponent implements OnInit {
   localstream: MediaStream;
 
   // websocket stuff
-  websocketUrl = BASE_SOCKET_URL+ "/socket"; // production url
+  // websocketUrl = BASE_SOCKET_URL+ "/socket"; // production url
   // websocketUrl =  'ws://localhost:8080/socket' // dev url
   conn: WebSocket;
   peerConnection: RTCPeerConnection;
@@ -69,8 +70,8 @@ export class VideoChatComponent implements OnInit {
     this.authService.getCurrentUser().subscribe(res => {
           this.doctorService.getById(res.id).subscribe(doc => {
             this.doctor = doc;
-            console.log("socket url", this.websocketUrl);
-            this.conn = new WebSocket(this.websocketUrl + '?userId=' + this.doctor.id);
+            console.log("socket url", environment.webSocketURL);
+            this.conn = new WebSocket(environment.webSocketURL + '?userId=' + this.doctor.id);
             this.conn.onopen = (ev: Event) => this.onOpen(ev);
             this.conn.onmessage = (msg: MessageEvent) => this.onMessage(msg);
           });

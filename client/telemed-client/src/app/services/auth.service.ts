@@ -2,21 +2,22 @@ import { Injectable, Output , EventEmitter} from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../models/User';
-import { REST, BASE_URL } from '../shared';
+import { environment } from 'src/environments/environment';
+// import { REST, BASE_URL } from '../shared';
 
-const AUTH_API = REST +'/api/auth';
-const USER = AUTH_API + '/user';
-const DOCTOR = AUTH_API + '/doctor';
-const PATIENT = AUTH_API + '/patient';
-const ADMIN = AUTH_API + '/admin';
+// const AUTH_API = REST +'/api/auth';
+// const USER = AUTH_API + '/user';
+// const DOCTOR = AUTH_API + '/doctor';
+// const PATIENT = AUTH_API + '/patient';
+// const ADMIN = AUTH_API + '/admin';
 // const AUTH_USER = 'http://localhost:8080/api/auth/user'
-const AUTH_USER = BASE_URL +'/api/auth/user'
+const AUTH_USER = environment.baseURL +'/api/auth/user'
 // const DOCTOR_API = 'http://localhost:8080/api/auth/doctor/'; //TODO make this just /auth/doctor/
-const DOCTOR_API = BASE_URL + '/api/auth/doctor/'; //TODO make this just /auth/doctor/
+const DOCTOR_API = environment.baseURL + '/api/auth/doctor/'; //TODO make this just /auth/doctor/
 // const PATIENT_API = 'http://localhost:8080/api/auth/patient/';
-const PATIENT_API = BASE_URL + '/api/auth/patient/';
+const PATIENT_API = environment.baseURL + '/api/auth/patient/';
 // const ADMIN_API = 'http://localhost:8080/api/auth/admin/';
-const ADMIN_API = BASE_URL + '/api/auth/admin/';
+const ADMIN_API = environment.baseURL + '/api/auth/admin/';
 
 
 const httpOptions = {
@@ -31,7 +32,6 @@ export class AuthService {
   @Output() getLoggedInUser: EventEmitter<User> = new EventEmitter();
 
   constructor(private http: HttpClient) { 
-    console.log("AUTH URL", AUTH_API);
   }
 
   login(credentials, api:string): Observable<User> {
