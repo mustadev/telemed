@@ -8,7 +8,8 @@ import { Patient } from 'src/app/models/Patient';
 import { Doctor } from 'src/app/models/Doctor';
 import { PatientService } from 'src/app/services/patient.service';
 import { CountdownComponent } from 'ngx-countdown';
-import { BASE_SOCKET_URL } from 'src/app/shared';
+// import { BASE_SOCKET_URL } from 'src/app/shared';
+import { environment } from 'src/environments/environment';
 
 const offerOptions: RTCOfferOptions = {
   offerToReceiveAudio: true,
@@ -31,7 +32,7 @@ export class VideoChatComponent implements OnInit {
   localstream: MediaStream;
 
   // websocket stuff
-  websocketUrl = BASE_SOCKET_URL + "/socket"; // production url
+  // websocketUrl = BASE_SOCKET_URL + "/socket"; // production url
   // websocketUrl = 'ws://localhost:8080/socket' // dev url
   conn: WebSocket;
   peerConnection: RTCPeerConnection;
@@ -79,7 +80,7 @@ export class VideoChatComponent implements OnInit {
             console.log("left time", this.config.leftTime);
             this.patientService.getById(appointment.patientId).subscribe(patient => {
               this.patient = patient;
-              this.conn = new WebSocket(this.websocketUrl +'?userId=' + this.patient.id);
+              this.conn = new WebSocket(environment.webSocketURL +'?userId=' + this.patient.id);
               this.conn.onopen = (ev: Event) => this.onOpen(ev);
               this.conn.onmessage = (msg: MessageEvent) => this.onMessage(msg);
             });

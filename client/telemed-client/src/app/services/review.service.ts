@@ -3,19 +3,17 @@ import { Observable } from 'rxjs';
 import { Review } from '../models/Review';
 import { HttpClient } from '@angular/common/http';
 import { Like } from '../models/Like';
-import { REST, BASE_URL } from '../shared';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ReviewService {
-  doctorUrl:string = BASE_URL + "/doctors";
+  doctorUrl:string = environment.baseURL + "/doctors";
   // doctorUrl:string = "http://localhost:8080/doctors";
 
-  doctorsURL:string = REST +'/doctors'
   // doctorUrl = this.doctorsURL; // test if this works
   constructor(private http:HttpClient) { 
-    console.log("doctor URL", this.doctorsURL);
   }
 
   getReviews(doctorId:string):Observable<Review[]>{
