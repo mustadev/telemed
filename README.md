@@ -29,3 +29,6 @@ docker build -t telemed .
 ```bash
 docker-compose up
 ```
+
+Navigate to <b>TeleMed</b> [here](http://localhost:8080)
+Navigate to <b> Rest Docs </b> [here](http://localhost:8080/swagger-ui.html)
