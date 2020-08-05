@@ -30,7 +30,6 @@
                        
                             <h6 *ngIf="patient?.email"><i class="fa fa-envelope"></i> {{patient.email}}</h6>
                         <h6 *ngIf="patient?.phone" class="mb-0"><i class="fa fa-phone"></i> {{patient.phone}}</h6>
-                        <h6  class="mb-0"><i class="fa fa-phone"></i> 0606060606</h6>
                         <h6 *ngIf="appointment.appointmentDate"><i class="fa fa-clock-o" aria-hidden="true"></i> Appointement : {{appointment.appointmentDate | date: 'short': 'locale'}}</h6>
                         <h6 *ngIf="appointment.bookingDate"><i class="fa fa-clock-o" aria-hidden="true"></i> Booking Date : {{appointment.bookingDate | date: 'short': 'locale' }}</h6>
                         <div *ngIf="appointment.state == 'PENDING'" class="form-group p-0 m-1 align-self-end">
