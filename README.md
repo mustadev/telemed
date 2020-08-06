@@ -1,6 +1,13 @@
 # TeleMed
 Visit your Doctor ONLINE.
 
+## Developed With:
+- **Spring boot**
+- **Angular**
+
+## Deploy with:
+- **Docker**
+
 ## FEATURES
 1. VIDEO CALL between a Doctor and a Patient.
 2. SEARCH for Doctor based on there name, Clinic name, there Location
